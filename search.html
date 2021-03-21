@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>¡No compres, adopta!</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation flex">
+        <a href="index.html">
+          <img src="assets/icons/huella.png" alt="Logo" class="image-logo" />
+        </a>
+        <ul class="nav-links">
+          <li class="nav-link">
+            <a class="inside-nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-link selected">
+            <a class="inside-nav-link" href="search.html">Buscar</a>
+          </li>
+          <li class="nav-link">
+            <a class="inside-nav-link" href="associates.html">Asociados</a>
+          </li>
+          <li class="nav-link">
+            <a class="inside-nav-link" href="about.html">Nosotros</a>
+          </li>
+          <li class="nav-link">
+            <a class="inside-nav-link" href="panel/login.html"
+              >Iniciar sesión</a
+            >
+          </li>
+        </ul>
+        <!-- end .nav-links -->
+      </nav>
+      <!-- .navigation -->
+    </header>
+    <!-- end .header -->
+    <main class="main">
+      <section id="search">
+        <div class="search-box flex">
+          <form action="search.html" class="search-form flex">
+            <div class="form-group">
+              <label for="gender">Género</label>
+              <input type="text" name="gender" id="gender" />
+            </div>
+            <!-- end .form-group -->
+            <div class="form-group">
+              <label for="breed">Raza</label>
+              <input type="text" name="breed" id="breed" />
+            </div>
+            <!-- end .form-group -->
+            <div class="form-group">
+              <label for="age">Edad</label>
+              <input type="text" name="age" id="age" />
+            </div>
+            <!-- end .form-group -->
+            <div class="form-group">
+              <label for="location">Ubicación</label>
+              <input type="text" name="location" id="location" />
+            </div>
+            <!-- end .form-group -->
+            <div class="form-actions">
+              <button class="button cancel" type="reset">Limpiar</button>
+              <button class="button accept" type="submit">Buscar</button>
+            </div>
+            <!-- end .form-actions -->
+          </form>
+          <!-- end .search-form -->
+        </div>
+        <!--end .search-box -->
+        <div class="search-results flex">
+          <div class="search-item">
+            <img src="assets/images/individual.jpg" alt="Mascota" />
+            <p class="search-item-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
+              rem repellat!
+            </p>
+            <span class="view-profile" onclick="redirect('/profile.html')"
+              >Ver perfil</span
+            >
+          </div>
+          <!-- end .search-item -->
+          <div class="search-item">
+            <img src="assets/images/individual.jpg" alt="Mascota" />
+            <p class="search-item-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
+              rem repellat!
+            </p>
+            <span class="view-profile" onclick="redirect('/profile.html')"
+              >Ver perfil</span
+            >
+          </div>
+          <!-- end .search-item -->
+          <div class="search-item">
+            <img src="assets/images/individual.jpg" alt="Mascota" />
+            <p class="search-item-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
+              rem repellat!
+            </p>
+            <span class="view-profile" onclick="redirect('/profile.html')"
+              >Ver perfil</span
+            >
+          </div>
+          <!-- end .search-item -->
+          <div class="search-item">
+            <img src="assets/images/individual.jpg" alt="Mascota" />
+            <p class="search-item-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
+              rem repellat!
+            </p>
+            <span class="view-profile" onclick="redirect('/profile.html')"
+              >Ver perfil</span
+            >
+          </div>
+          <!-- end .search-item -->
+        </div>
+        <!-- end .search-results -->
+      </section>
+      <!-- end #search -->
+    </main>
+    <!-- end .main -->
+    <footer class="footer flex">
+      <img src="assets/icons/huella.png" alt="logo" class="image-logo" />
+      <div class="text">Organizacion sin fines de lucro</div>
+      <div class="social-media">
+        <a class="social-icon" href="#"
+          ><img src="assets/icons/facebook.png" alt="Facebook"
+        /></a>
+        <!-- end .social-icon-->
+        <a class="social-icon" href="#"
+          ><img src="assets/icons/instagram.png" alt="Instagram"
+        /></a>
+        <!-- end .social-icon -->
+        <a class="social-icon" href="#"
+          ><img src="assets/icons/youtube.png" alt="Youtube"
+        /></a>
+        <!-- end .social-icon -->
+      </div>
+      <!-- end .social-media -->
+    </footer>
+    <!--  end .footer -->
+    <script>
+      function redirect(path) {
+        window.location.assign(path);
+      }
+    </script>
+  </body>
+</html>

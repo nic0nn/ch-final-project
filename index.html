@@ -1,0 +1,116 @@
+<!-- Este sitio web intenta simular un sitio de compras de mascotas pero que lleva al usuario a adoptar en vez de comprar.
+Se desarrolla para ser un lazo entre refugios y posibles personas que quieran adoptar.-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>¡No compres, adopta!</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation flex">
+        <a href="index.html">
+          <img src="assets/icons/huella.png" alt="Logo" class="image-logo" />
+        </a>
+        <ul class="nav-links">
+          <li class="nav-link selected">
+            <a class="inside-nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-link">
+            <a class="inside-nav-link" href="search.html">Buscar</a>
+          </li>
+          <!-- <li class="nav-link"><a class="inside-nav-link"href="associates.html">Asociados</a></li> 
+                  Siguiendo la estrategia mencionada no se le permite al usuario ver desde el home
+                  los asociados a la organización-->
+          <li class="nav-link">
+            <a class="inside-nav-link" href="about.html">Nosotros</a>
+          </li>
+          <li class="nav-link">
+            <a class="inside-nav-link" href="panel/login.html"
+              >Iniciar sesión</a
+            >
+          </li>
+        </ul>
+        <!--end .nav-links -->
+      </nav>
+      <!-- end .navigation -->
+    </header>
+    <!-- end .header -->
+    <main class="main">
+      <section id="hero">
+        <div class="hero-description">
+          <h1>Neque porro quisquam est qui dolorem ipsum</h1>
+          <a class="hero-button" href="#questions">¡Vamos allá!</a>
+        </div>
+        <!-- end .hero-description -->
+      </section>
+      <!--  end #hero -->
+      <section id="questions">
+        <!-- En el carrousel se mostrarán diferentes preguntas al usuario. El siguiente div es solo un bosquejo.
+                 Posteriormente la funcionalidad se hará mediante JS-->
+        <div class="carrousel flex">
+          <div class="questions-container flex">
+            <h3 class="question-text justify">
+              1- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              tristique posuere condimentum.
+            </h3>
+            <!-- end .question-text -->
+            <div class="question-buttons">
+              <button
+                class="button cancel"
+                onclick="redirect('/whyAdopt.html')"
+                class="cancel"
+              >
+                Cancelar
+              </button>
+              <button
+                class="button accept"
+                onclick="redirect('/search.html')"
+                class="accept"
+              >
+                Continuar
+              </button>
+            </div>
+            <!--end .question-buttons -->
+          </div>
+          <!-- end .questions-container -->
+        </div>
+        <!-- end .carrousel -->
+      </section>
+      <!-- end #questions -->
+    </main>
+    <!-- end .main -->
+    <footer class="footer flex">
+      <img src="assets/icons/huella.png" alt="logo" class="image-logo" />
+      <div class="text">Organizacion sin fines de lucro</div>
+      <div class="social-media">
+        <a class="social-icon" href="#"
+          ><img src="assets/icons/facebook.png" alt="Facebook"
+        /></a>
+        <!-- end .social-icon-->
+        <a class="social-icon" href="#"
+          ><img src="assets/icons/instagram.png" alt="Instagram"
+        /></a>
+        <!-- end .social-icon -->
+        <a class="social-icon" href="#"
+          ><img src="assets/icons/youtube.png" alt="Youtube"
+        /></a>
+        <!-- end .social-icon -->
+      </div>
+      <!-- end .social-media -->
+    </footer>
+    <!--  end .footer -->
+    <script>
+      function redirect(path) {
+        window.location.assign(path);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="panel.css" />
+    <link rel="stylesheet" href="./../assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>Iniciar sesión</title>
+  </head>
+  <body>
+    <main>
+      <section id="login" class="flex">
+        <div class="login-container">
+          <h1>Bienvenido/a!</h1>
+          <form
+            class="login-form flex"
+            action="#"
+            onsubmit="redirect(event, '/panel/pets.html') "
+          >
+            <label for="username">Usuario</label>
+            <input type="text" name="username" id="username" />
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" id="password" />
+            <div class="form-actions">
+              <a class="button cancel" href="./../index.html">Cancelar</a>
+              <button class="button accept" type="submit">Iniciar sesión</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- Este JS se añadió para simular un inicio de sesión exitoso -->
+    <script>
+      function redirect(e, path) {
+        e.preventDefault();
+        window.location.assign(path);
+      }
+    </script>
+  </body>
+</html>
