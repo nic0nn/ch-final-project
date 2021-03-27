@@ -1,18 +1,20 @@
 /* --- General --- */
 
-
 :root {
   --dark-salmon: #f2a396;
-  --salmon: #FEC5BB;
-  --light-salmon: #F8EDEB;
-  --ligth-orange: #FEC89A;
-  --gray: #CCCCCC;
-  --light-blue: #D8E2DC;
+  --salmon: #fec5bb;
+  --light-salmon: #f8edeb;
+  --ligth-orange: #fec89a;
+  --gray: #cccccc;
+  --light-blue: #d8e2dc;
 }
 
 body {
   background-color: var(--light-salmon);
   font-family: Fabada;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .button {
@@ -62,7 +64,14 @@ body {
 }
 
 .main {
-  min-height: 85vh;
+  flex: 1;
+}
+
+.main.grid {
+  flex: 1;
+  grid-template-rows: 100%;
+  grid-template-areas: "sidebar main-content";
+  grid-template-columns: 200px auto;
 }
 
 /* --- Header --- */
@@ -365,8 +374,8 @@ body {
 }
 
 .main .sidebar {
-  width: 200px;
   background-color: #fec5bb;
+  grid-area: sidebar;
 }
 
 .main .sidebar ul {
@@ -392,7 +401,7 @@ body {
 }
 .main .main-content {
   margin: 0 2em;
-  width: 100%;
+  grid-area: main-content;
 }
 
 .main .main-content .content-header {
@@ -401,22 +410,22 @@ body {
   width: 100%;
 }
 
-.main .main-content .row {
+.main .main-content .main-table .row {
   font-size: 12px;
   grid-gap: 0.25em;
 }
 
-.main .main-content .row.headers * {
+.main .main-content .main-table .row.headers * {
   margin-bottom: 0.25em;
   background-color: var(--ligth-orange);
 }
 
-
-.main .main-content .row.odd * {
+.main .main-content .main-table .row.odd * {
   background-color: var(--salmon);
 }
 
-.main .main-content .associate-table, .pet-table {
+.main .main-content .associate-table,
+.pet-table {
   grid-auto-rows: 50px;
 }
 
@@ -424,7 +433,7 @@ body {
   grid-template-columns: repeat(6, 1fr);
 }
 
-.main .main-content .pet-table  .row {
+.main .main-content .pet-table .row {
   grid-template-columns: repeat(7, 1fr);
 }
 
@@ -437,7 +446,7 @@ body {
 }
 
 .main .main-content .new-form .pet-group,
-.main .main-content .new-form .associate-group  {
+.main .main-content .new-form .associate-group {
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -469,7 +478,6 @@ body {
 .main .main-content .new-form .form-group .images-container {
   flex-wrap: wrap;
 }
-  
 
 /* --- Fonts --- */
 
