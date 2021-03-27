@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../../assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>Bienvenido/a!</title>
+  </head>
+  <body>
+    <header class="header panel">
+      <nav class="navigation flex">
+        <a href="./../../index.html">
+          <img
+            src="./../../assets/icons/huella.png"
+            alt="Logo"
+            class="image-logo"
+          />
+        </a>
+        <div class="user-profile flex">
+          <span class="username">Administrador</span>
+          <img src="./../../assets/icons/user.png" alt="Usuario" />
+        </div>
+        <!-- end .user-profle -->
+      </nav>
+      <!-- end .navigation -->
+    </header>
+    <!-- end .header -->
+    <main class="main flex">
+      <div class="sidebar">
+        <nav>
+          <ul>
+            <li class="selected"><a href="./pets.html">Mascotas</a></li>
+            <li><a href="./associates.html">Asociados</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- end .sidebar -->
+      <div class="main-content">
+        <div class="content-header flex">
+          <h1>Mascotas</h1>
+          <button class="button accept" onclick="redirect('./newPet.html')">
+            Nueva mascota
+          </button>
+        </div>
+        <!-- end .content-header -->
+        <div class="main-table">
+          <div class="filters">
+            <input
+              type="search"
+              name="search"
+              placeholder="Buscar"
+              id="search"
+            />
+            <select name="paginator" id="paginator">
+              <option value="5">5 filas</option>
+              <option value="10">10 filas</option>
+              <option value="15">15 filas</option>
+              <option value="20">20 filas</option>
+            </select>
+          </div>
+          <!-- end .filters -->
+          <div class="pet-table grid">
+            <div class="row grid headers">
+              <div class="flex flex-center">Nombre</div>
+              <div class="flex flex-center">Edad</div>
+              <div class="flex flex-center">Raza</div>
+              <div class="flex flex-center">Género</div>
+              <div class="flex flex-center">Ubicación</div>
+              <div class="flex flex-center">Estado</div>
+              <div class="flex flex-center">Acciones</div>
+            </div>
+            <!-- end .row.headers -->
+            <div class="row grid odd">
+              <div class="flex flex-center">Laica</div>
+              <div class="flex flex-center">5 meses</div>
+              <div class="flex flex-center">Mezcla</div>
+              <div class="flex flex-center">Femenino</div>
+              <div class="flex flex-center">Asociación 4 patas</div>
+              <div class="flex flex-center">
+                <input type="checkbox" name="pet-state-1" id="pet-state-1" />
+              </div>
+              <div class="flex flex-center">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                    fill="#444"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- end .row -->
+            <div class="row grid">
+              <div class="flex flex-center">Laica</div>
+              <div class="flex flex-center">5 meses</div>
+              <div class="flex flex-center">Mezcla</div>
+              <div class="flex flex-center">Femenino</div>
+              <div class="flex flex-center">Asociación 4 patas</div>
+              <div class="flex flex-center">
+                <input type="checkbox" name="pet-state-1" id="pet-state-2" />
+              </div>
+              <div class="flex flex-center">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                    fill="#444"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- end .row -->
+            <div class="row grid odd">
+              <div class="flex flex-center">Laica</div>
+              <div class="flex flex-center">5 meses</div>
+              <div class="flex flex-center">Mezcla</div>
+              <div class="flex flex-center">Femenino</div>
+              <div class="flex flex-center">Asociación 4 patas</div>
+              <div class="flex flex-center">
+                <input type="checkbox" name="pet-state-1" id="pet-state-3" />
+              </div>
+              <div class="flex flex-center">
+                <svg
+                  width="24"
+                  height="24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                    fill="#444"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- end .row -->
+          </div>
+          <!-- end .pet-table -->
+        </div>
+        <!-- end .main-table -->
+      </div>
+      <!-- end .main-content -->
+    </main>
+    <!-- end .main -->
+    <script>
+      function redirect(path) {
+        window.location.assign(path);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <title>¡No compres, adopta!</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation flex">
+        <a href="./../index.html">
+          <img
+            src="./../assets/icons/huella.png"
+            alt="Logo"
+            class="image-logo"
+          />
+        </a>
+        <ul class="nav-links">
+          <li class="nav-link">
+            <a class="inside-nav-link" href="./../index.html">Home</a>
+          </li>
+          <li class="nav-link selected">
+            <a class="inside-nav-link" href="search.html">Buscar</a>
+          </li>
+          <li class="nav-link">
+            <a class="inside-nav-link" href="associates.html">Asociados</a>
+          </li>
+          <li class="nav-link">
+            <a class="inside-nav-link" href="about.html">Nosotros</a>
+          </li>
+          <li class="nav-link">
+            <a class="inside-nav-link" href="./panel/login.html"
+              >Iniciar sesión</a
+            >
+          </li>
+        </ul>
+        <!-- end .nav-links -->
+      </nav>
+      <!-- .navigation -->
+    </header>
+    <!-- end .header -->
+    <main class="main">
+      <section id="pet-info" class="flex">
+        <img class="pet-image" src="./../images//aboutUs.jpg" alt="Laica" />
+        <div class="characteristics">
+          <h1>Mi nombre es Laica!</h1>
+          <p><span class="bold">Género:</span> Femenino</p>
+          <p><span class="bold">Edad:</span> 10 meses</p>
+          <p><span class="bold">Raza:</span> Callejera</p>
+          <p>
+            <span class="bold">Ubicación:</span> Asociación 4 patas. Mendoza
+          </p>
+          <button class="button selected" onclick="redirect('./whyAdopt.html')">
+            Adoptame
+          </button>
+          <button class="button accept" onclick="redirect('./whyAdopt.html')">
+            ¿Por qué adoptar?
+          </button>
+        </div>
+        <!-- end .characteristics -->
+      </section>
+      <!-- end .pet-info -->
+      <section id="pet-history">
+        <h2 class="history-title">Mi historia</h2>
+        <p class="history-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+          doloribus explicabo similique pariatur mollitia, atque inventore ullam
+          temporibus cupiditate! Quam aliquid laboriosam impedit iure provident
+          odio minima voluptates minus atque!
+        </p>
+        <!-- end .history-text-->
+        <p class="history-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+          quisquam porro at ab et quos ex unde odit rerum possimus
+          exercitationem aut commodi numquam temporibus illum minima consectetur
+          sunt ipsa?
+        </p>
+        <!-- end .history-text -->
+        <iframe
+          class="youtube-video"
+          src="https://www.youtube.com/embed/RLbF-kkKmXM"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <!-- end #pet-history -->
+    </main>
+    <!-- end .main -->
+    <footer class="footer flex">
+      <img src="./../assets/icons/huella.png" alt="logo" class="image-logo" />
+      <div class="text">Organizacion sin fines de lucro</div>
+      <div class="social-media">
+        <a class="social-icon" href="#"
+          ><img src="./../assets/icons/facebook.png" alt="Facebook"
+        /></a>
+        <!-- end .social-icon-->
+        <a class="social-icon" href="#"
+          ><img src="./../assets/icons/instagram.png" alt="Instagram"
+        /></a>
+        <!-- end .social-icon -->
+        <a class="social-icon" href="#"
+          ><img src="./../assets/icons/youtube.png" alt="Youtube"
+        /></a>
+        <!-- end .social-icon -->
+      </div>
+      <!-- end .social-media -->
+    </footer>
+    <!--  end .footer -->
+    <script>
+      function redirect(path) {
+        window.location.assign(path);
+      }
+    </script>
+  </body>
+</html>
