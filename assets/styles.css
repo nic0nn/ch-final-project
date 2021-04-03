@@ -30,13 +30,8 @@ body {
   z-index: 1;
 }
 
-.button:hover {
-  /* background-color: var(--dark-salmon) !important; */
-  transition: 0.5s linear;
-}
-
 .button:hover:before{
-    width: 100%;
+  width: 100%;
 }
 
 .button:after {
