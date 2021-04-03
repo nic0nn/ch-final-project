@@ -22,15 +22,56 @@ body {
   border-radius: 8px;
   margin-right: 1em;
   height: 40px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
+.button:hover {
+  /* background-color: var(--dark-salmon) !important; */
+  transition: 0.5s linear;
+}
+
+.button:hover:before{
+    width: 100%;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  transition: all .3s;
+  background-color: var(--dark-salmon);
+  z-index: -1;
+}
+
+
 .button.cancel {
-  background-color: var(--gray);
   border: none;
   box-shadow: none;
 }
 
-.button.accept {
+.button.cancel:after {
+  background-color: var(--gray);
+}
+
+.button.accept::after {
   background-color: var(--salmon);
 }
 
@@ -100,6 +141,25 @@ body {
   padding: 0.5em 1em;
   list-style: none;
   border-radius: 8px;
+  position: relative;
+}
+
+.header .navigation .nav-links .nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.header .navigation .nav-links .nav-link:not(.selected):hover:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 .header .navigation .nav-links .nav-link .inside-nav-link {
@@ -108,9 +168,8 @@ body {
   color: black;
 }
 
-.header .navigation .nav-links .nav-link .inside-nav-link:hover {
+.header .navigation .nav-links .nav-link:hover .inside-nav-link {
   color: white;
-  text-decoration: underline;
 }
 
 /* --- Home --- */
@@ -127,7 +186,7 @@ body {
   color: white;
   font-weight: 800;
   position: relative;
-  top: 30%;
+  top: 50%;
   margin: 0 2em;
 }
 
@@ -147,6 +206,7 @@ body {
 
 #hero .hero-description .hero-button:hover {
   background-color: var(--dark-salmon);
+  transition: 0.5s linear;
 }
 
 #questions {
@@ -157,6 +217,7 @@ body {
   height: 100%;
   align-items: center;
   justify-content: center;
+  background: radial-gradient(#F8EDEB 20%, #FAE1DD, #fec5bb);
 }
 
 #questions .carrousel .questions-container {
