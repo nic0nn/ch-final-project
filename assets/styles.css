@@ -326,7 +326,9 @@ body {
 }
 
 #associates .associate-item img {
-  width: 400px;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* --- About us --- */
