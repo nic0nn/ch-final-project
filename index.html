@@ -6,11 +6,12 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <title>¡No compres, adopta!</title>
   </head>
   <body>
@@ -55,36 +56,86 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
       <section id="questions">
         <!-- En el carrousel se mostrarán diferentes preguntas al usuario. El siguiente div es solo un bosquejo.
                  Posteriormente la funcionalidad se hará mediante JS-->
-        <div class="carrousel flex">
-          <div class="questions-container flex">
-            <h2 class="question-text justify">
-              1- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              tristique posuere condimentum.
-            </h2>
-            <!-- end .question-text -->
-            <div class="question-buttons">
-              <button
-                class="button cancel"
-                onclick="redirect('/pages/whyAdopt.html')"
-              >
-                Cancelar
-              </button>
-              <button
-                class="button accept"
-                onclick="redirect('/pages/search.html')"
-              >
-                Continuar
-              </button>
+        <div class="carrousel flex" id="questions-carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="questions-container flex">
+                <h2 class="question-text">
+                  1- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h2>
+                <!-- end .question-text -->
+                <div class="question-buttons">
+                  <button
+                    class="button cancel"
+                    onclick="redirect('/pages/whyAdopt.html')"
+                  >
+                    Cancelar
+                  </button>
+                  <button class="button accept" onclick="slideCarousel()">
+                    Continuar
+                  </button>
+                </div>
+                <!--end .question-buttons-->
+              </div>
+              <!-- end .questions-container -->
             </div>
-            <!--end .question-buttons -->
+            <!-- emd .carousel-item -->
+            <div class="carousel-item" data-interval="false">
+              <div class="questions-container flex">
+                <h2 class="question-text">
+                  2- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h2>
+                <!-- end .question-text -->
+                <div class="question-buttons">
+                  <button
+                    class="button cancel"
+                    onclick="redirect('/pages/whyAdopt.html')"
+                  >
+                    Cancelar
+                  </button>
+                  <button class="button accept" onclick="slideCarousel()">
+                    Continuar
+                  </button>
+                </div>
+                <!--end .question-buttons-->
+              </div>
+              <!-- end .question-container -->
+            </div>
+            <!-- end .carousel-item -->
+            <div class="carousel-item">
+              <div class="questions-container flex">
+                <h2 class="question-text">
+                  3- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h2>
+                <!-- end .question-text -->
+                <div class="question-buttons">
+                  <button
+                    class="button cancel"
+                    onclick="redirect('/pages/whyAdopt.html')"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    class="button accept"
+                    onclick="redirect('/pages/whyAdopt.html')"
+                  >
+                    Continuar
+                  </button>
+                </div>
+                <!--end .question-buttons-->
+              </div>
+              <!-- end .question-container -->
+            </div>
+            <!-- end .carousel-item -->
           </div>
-          <!-- end .questions-container -->
+          <!-- end .carousel-inner -->
         </div>
         <!-- end .carrousel -->
       </section>
       <!-- end #questions -->
     </main>
     <!-- end .main -->
+
     <footer class="footer flex">
       <img src="assets/icons/huella.png" alt="logo" class="image-logo" />
       <div class="text">Organizacion sin fines de lucro</div>
@@ -105,10 +156,30 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
       <!-- end .social-media -->
     </footer>
     <!--  end .footer -->
+
+    <!-- scripts -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
     <script>
       function redirect(path) {
         window.location.assign(path);
       }
     </script>
+    <script>
+      function slideCarousel() {
+        $("#questions-carousel").carousel("next");
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        //Event for pushed the video
+        $("#your-carousel-id").carousel({
+          pause: true,
+          interval: false,
+        });
+      });
+    </script>
+    <!-- scripts -->
   </body>
 </html>

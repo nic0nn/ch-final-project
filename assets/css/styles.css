@@ -127,7 +127,9 @@ body {
 }
 
 .header .navigation .nav-links {
-  display: inline;
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 
 .header .navigation .nav-links .nav-link {
@@ -170,7 +172,7 @@ body {
 /* --- Home --- */
 
 #hero {
-  background-image: url("./../images/hero.jpg");
+  background-image: url("./../../images/hero.jpg");
   background-size: cover;
   background-position: center;
   height: 90vh;
@@ -218,6 +220,7 @@ body {
 #questions .carrousel .questions-container {
   width: 70%;
   flex-direction: column;
+  margin: 0 auto;
   align-items: center;
 }
 
@@ -232,7 +235,7 @@ body {
 }
 
 #search .search-box {
-  background-image: url("./../images/search.jpg");
+  background-image: url("./../../images/search.jpg");
   background-size: cover;
   background-position: 0 100%;
   height: 350px;
@@ -287,8 +290,12 @@ body {
   justify-content: space-around;
 }
 
-#pet-info .pet-image {
-  width: 400px;
+#pet-info .pet-imag {
+  height: 100%;
+}
+#pet-info .pet-image  > img {
+  height: 100%;
+  width: auto;
 }
 
 #pet-history {
@@ -376,7 +383,7 @@ body {
 
 .footer .social-icon img {
   width: 24px;
-  padding-right: 1em;
+  margin-right: 1em;
 }
 
 /* --- Panel --- */
@@ -541,5 +548,5 @@ body {
 
 @font-face {
   font-family: "Fabada";
-  src: url("./fonts/Fabada.ttf");
+  src: url("./../fonts/Fabada.ttf");
 }
