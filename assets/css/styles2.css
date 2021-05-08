@@ -280,7 +280,7 @@ section > .h* {
   flex: 2;
 }
 .contact .contact__container__our-location__gmap {
-  background-image: url(./../../../images/map.png);
+  background-image: url(./../../images/map.png);
 }
 .contact .contact__container__form {
   flex: 1;
