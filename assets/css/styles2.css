@@ -261,6 +261,42 @@ section > .h* {
   width: 40%;
 }
 
+.contact {
+  padding: 2em;
+}
+.contact .contact__title, .contact .contact__title--great, .contact .contact__title--black {
+  text-decoration: underline;
+  font-size: 1.5em;
+  color: #f2a396;
+}
+.contact .contact__title--black {
+  color: black;
+}
+.contact .contact__title--great {
+  font-size: 2.5em;
+}
+.contact .contact__container__our-location, .contact .contact__container__our-location__gmap {
+  height: 400px;
+  flex: 2;
+}
+.contact .contact__container__our-location__gmap {
+  background-image: url(./../../../images/map.png);
+}
+.contact .contact__container__form {
+  flex: 1;
+  margin-right: 2em;
+}
+.contact .contact__container__form .contact__container__form__form-group {
+  width: 300px;
+}
+.contact .contact__container__form .contact__container__form__form-group .contact__container__form__form-grup__textarea {
+  height: 250px;
+  resize: none;
+}
+.contact .contact__container__form .contact__container__form__submit {
+  width: 300px;
+}
+
 .page-footer {
   padding: 20px;
   position: relative;
