@@ -1,0 +1,21 @@
+.page-footer {
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+
+  .row {
+    margin: 0;
+  }
+
+  .footer-logo {
+    img {
+      width: 80px;
+    }
+  }
+
+  .social-icon img {
+    width: 24px;
+    margin-right: 1em;
+  }
+}

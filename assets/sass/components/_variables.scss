@@ -1,0 +1,21 @@
+// pets website
+$dark-salmon: #f2a396;
+$light-salmon: #f8edeb;
+$light-blue: #d8e2dc;
+$grey: #cccccc;
+$orange: #fec89a;
+$light-orange: #ffd7ba;
+
+
+// Heights
+$header-height: 64px;
+$section-height: unquote("-webkit-calc(100vh - #{$header-height})"); 
+
+// materialize
+$primary-color: #fec5bb;
+$footer-bg-color: $light-blue;
+$secondary-color: $dark-salmon;
+$button-background-focus: $primary-color;
+$input-focus-color: #000000;
+$success-color: #000;
+$input-border-color: #000;

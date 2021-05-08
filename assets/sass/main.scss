@@ -1,0 +1,26 @@
+// Global components
+@import 'components/variables';
+@import 'components/global';
+@import 'components/fonts';
+@import 'components/buttons';
+
+// Header
+@import 'components/navbar';
+
+// Home section
+@import 'components/hero';
+@import 'components/questions';
+
+// Search section
+@import 'components/search';
+
+
+// Pet Profile section
+@import 'components/profile';
+
+// Footer
+@import 'components/footer';
+
+
+// Materialize-CSS
+@import "materialize/materialize.scss";

@@ -1,0 +1,29 @@
+#pet-info {
+  margin-top: 50px;
+  
+  .card-title {
+    width: 100%;
+    height: 50px;
+    font-size: 2em;
+    background-color: $dark-salmon;
+  }
+
+  .card {
+    margin-top: 0;
+
+    .card-action {
+      .button.selected {
+        color: white;
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+#pet-modal {
+  width: 40%;
+}

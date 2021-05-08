@@ -4,100 +4,143 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./../assets/css/styles2.css" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link rel="stylesheet" href="./../assets/css/styles.css" />
     <title>¡No compres, adopta!</title>
   </head>
   <body>
     <header class="header">
-      <nav class="navigation flex">
-        <a href="./../index.html">
-          <img
-            src="./../assets/icons/huella.png"
-            alt="Logo"
-            class="image-logo"
-          />
-        </a>
-        <ul class="nav-links">
-          <li class="nav-link">
-            <a class="inside-nav-link" href="./../index.html">Home</a>
-          </li>
-          <li class="nav-link selected">
-            <a class="inside-nav-link" href="search.html">Buscar</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="associates.html">Asociados</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="about.html">Nosotros</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="./panel/login.html"
-              >Iniciar sesión</a
-            >
-          </li>
-        </ul>
-        <!-- end .nav-links -->
-      </nav>
-      <!-- .navigation -->
-    </header>
-    <!-- end .header -->
-    <main class="main container-fluid">
-      <section id="pet-info" class="flex">
-        <div class="row w-100 align-items-center">
-          <div class="pet-image col-xs-12 col-md-6">
+      <nav>
+        <div class="navigation nav-wrapper z-depth-1">
+          <a href="./../index.html" class="logo">
             <img
-              class="rounded-circle img-fluid"
-              src="./../images//aboutUs.jpg"
-              alt="Laica"
+              src="./../assets/icons/huella.png"
+              alt="Logo"
+              class="image-logo"
             />
-          </div>
-          <div class="characteristics col-xs-12 col-md-6">
-            <h1>Mi nombre es Laica!</h1>
-            <p><span class="bold">Género:</span> Femenino</p>
-            <p><span class="bold">Edad:</span> 10 meses</p>
-            <p><span class="bold">Raza:</span> Callejera</p>
-            <p>
-              <span class="bold">Ubicación:</span> Asociación 4 patas. Mendoza
-            </p>
-            <button
-              class="button selected"
-              onclick="redirect('./whyAdopt.html')"
-            >
-              Adoptame
-            </button>
-            <button class="button accept" onclick="redirect('./whyAdopt.html')">
-              ¿Por qué adoptar?
-            </button>
-          </div>
-          <!-- end .characteristics -->
+          </a>
+          <!-- end .logo -->
+          <ul id="nav-mobile" class="nav-links right hide-on-med-and-down">
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./../index.html">Home</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./search.html">Buscar</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./associates.html">Asociados</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./about.html">Nosotros</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./panel/login.html">
+                Iniciar sesión
+              </a>
+            </li>
+            <!-- .end nav-link -->
+          </ul>
+          <!-- end .nav-links -->
         </div>
-      </section>
-      <!-- end .pet-info -->
-      <section id="pet-history">
-        <div class="row align-items-center">
-          <div class="pet-history col-md-6">
-            <h2 class="history-title">Mi historia</h2>
-            <p class="history-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              doloribus explicabo similique pariatur mollitia, atque inventore
-              ullam temporibus cupiditate! Quam aliquid laboriosam impedit iure
-              provident odio minima voluptates minus atque!
-            </p>
-            <!-- end .history-text-->
-            <p class="history-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
-              quisquam porro at ab et quos ex unde odit rerum possimus
-              exercitationem aut commodi numquam temporibus illum minima
-              consectetur sunt ipsa?
-            </p>
+        <!-- end .navigation -->
+      </nav>
+      <!-- end nav -->
+    </header>
+    <!-- end header -->
+    
+    <main class="main">
+      <section id="pet-info">
+        <div class="row container equal-col">
+          <div class="col s12 l6 flex flex-center">
+            <div class="pet-history">
+              <div class="section-title">
+                <h1 class="history-title">Mi historia</h1>
+              </div>
+              <!-- end .section-title -->
+              <p class="history-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                doloribus explicabo similique pariatur mollitia, atque inventore
+                ullam temporibus cupiditate! Quam aliquid laboriosam impedit
+                iure provident odio minima voluptates minus atque!
+              </p>
+              <!-- end .history-text-->
+              <p class="history-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt, quisquam porro at ab et quos ex unde odit rerum
+                possimus exercitationem aut commodi numquam temporibus illum
+                minima consectetur sunt ipsa?
+              </p>
+              <!-- end .history-text-->
+              <p class="history-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt, quisquam porro at ab et quos ex unde odit rerum
+                possimus exercitationem aut commodi numquam temporibus illum
+                minima consectetur sunt ipsa?
+              </p>
+              <!-- end .history-text-->
+              <p class="history-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt, quisquam porro at ab et quos ex unde odit rerum
+                possimus exercitationem aut commodi numquam temporibus illum
+                minima consectetur sunt ipsa?
+              </p>
+            </div>
+            <!-- end .pet-history -->
           </div>
-          <!-- end .history-text -->
-          <div class="pet-video col-md-6">
+          <!-- end .col -->
+          <div class="col s12 l6 flex flex-center flex-column">
+            <div class="card-title flex flex-center white-text">
+              <span>Laica</span>
+            </div>
+            <!-- end .card-title -->
+            <div class="card col s12">
+              <div class="card-image">
+                <img
+                  class="responsive-image"
+                  src="./../images//aboutUs.jpg"
+                  alt="Laica"
+                />
+              </div>
+              <!-- end .card-image -->
+              <div class="card-content">
+                <p><span class="bold">Género:</span> Femenino</p>
+                <p><span class="bold">Edad:</span> 10 meses</p>
+                <p><span class="bold">Raza:</span> Callejera</p>
+                <p>
+                  <span class="bold">Ubicación:</span> Asociación 4 patas.
+                  Mendoza
+                </p>
+              </div>
+              <!-- end .card-content-->
+              <div class="card-action flex flex-center">
+                <button
+                  class="button cancel"
+                  onclick="redirect('./whyAdopt.html')"
+                >
+                  ¿Por qué adoptar?
+                </button>
+                <button
+                  data-target="pet-modal"
+                  class="button selected modal-trigger"
+                >
+                  Adoptar
+                </button>
+              </div>
+              <!-- end .card-cation -->
+            </div>
+            <!-- end .card -->
+          </div>
+        </div>
+        <!-- end .container -->
+        <div class="row container">
+          <div class="pet-video col s12">
             <iframe
               class="youtube-video"
               src="https://www.youtube.com/embed/RLbF-kkKmXM"
@@ -105,70 +148,92 @@
               allowfullscreen
             ></iframe>
           </div>
+          <!-- end .pet-video -->
         </div>
+        <!-- end .container -->
       </section>
-      <!-- end #pet-history -->
-      <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
-              </button>
-            </div>
+      <!-- end .pet-info -->
+      <div id="pet-modal" class="modal pet-modal">
+        <div class="modal-content">
+          <h4>Información de contacto</h4>
+          <div class="row">
+            <form action="profile.html">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="text" class="validate" />
+                <label for="email">Email</label>
+              </div>
+              <!-- end .input-field -->
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <input id="phone" type="text" class="validate" />
+                <label for="phone">Teléfono</label>
+              </div>
+              <!-- end .input-field -->
+              <div class="input-field col s12">
+                <i class="material-icons prefix">message</i>
+                <textarea id="comment" class="materialize-textarea"></textarea>
+                <label for="comment">Mensaje</label>
+              </div>
+              <!-- end .input-field -->
+            </form>
+            <!-- end form -->
           </div>
+          <!-- end .row -->
         </div>
+        <!-- end .modal-content -->
+        <div class="modal-footer">
+          <a href="#!" class="modal-close btn-flat">Contactar</a>
+        </div>
+        <!-- end .modal-footer -->
       </div>
+      <!-- end #pet-modal -->
     </main>
     <!-- end .main -->
-    <footer class="footer flex">
-      <img src="./../assets/icons/huella.png" alt="logo" class="image-logo" />
-      <div class="text">Organizacion sin fines de lucro</div>
-      <div class="social-media">
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/facebook.png" alt="Facebook"
-        /></a>
-        <!-- end .social-icon-->
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/instagram.png" alt="Instagram"
-        /></a>
-        <!-- end .social-icon -->
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/youtube.png" alt="Youtube"
-        /></a>
-        <!-- end .social-icon -->
+
+    <footer class="page-footer">
+      <div class="row no-margin valign-wrapper">
+        <div class="col s1 footer-logo">
+          <img src="./../assets/icons/huella.png" alt="logo" />
+        </div>
+        <!-- end .footer-logo -->
+        <div class="footer-text black-text col s9 center-align">
+          <span class="center">Organizacion sin fines de lucro</span>
+        </div>
+        <!-- end .footer-text -->
+        <div class="social-media col s2 center">
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/facebook.png" alt="Facebook" />
+          </a>
+          <!-- end .social-icon-->
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/instagram.png" alt="Instagram" />
+          </a>
+          <!-- end .social-icon -->
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/youtube.png" alt="Youtube" />
+          </a>
+          <!-- end .social-icon -->
+        </div>
+        <!-- end .social-media -->
       </div>
-      <!-- end .social-media -->
+      <!-- end .row -->
     </footer>
     <!--  end .footer -->
+
+    <!-- scripts -->
+    <script src="./../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./../assets/js/materialize.min.js"></script>
     <script>
       function redirect(path) {
         window.location.assign(path);
       }
     </script>
-    <script src="./../assets/js/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="./../assets/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".modal").modal();
+      });
+    </script>
+    <!-- end scripts -->
   </body>
 </html>

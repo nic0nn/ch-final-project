@@ -8,152 +8,300 @@
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link rel="stylesheet" href="./../assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../assets/css/styles2.css" />
     <title>¡No compres, adopta!</title>
   </head>
   <body>
     <header class="header">
-      <nav class="navigation flex">
-        <a href="./../index.html">
-          <img
-            src="./../assets/icons/huella.png"
-            alt="Logo"
-            class="image-logo"
-          />
-        </a>
-        <ul class="nav-links">
-          <li class="nav-link">
-            <a class="inside-nav-link" href="./../index.html">Home</a>
-          </li>
-          <li class="nav-link selected">
-            <a class="inside-nav-link" href="search.html">Buscar</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="associates.html">Asociados</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="about.html">Nosotros</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="panel/login.html"
-              >Iniciar sesión</a
-            >
-          </li>
-        </ul>
-        <!-- end .nav-links -->
+      <nav>
+        <div class="navigation nav-wrapper z-depth-1">
+          <a href="./../index.html" class="logo">
+            <img
+              src="./../assets/icons/huella.png"
+              alt="Logo"
+              class="image-logo"
+            />
+          </a>
+          <ul id="nav-mobile" class="nav-links right hide-on-med-and-down">
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./../index.html">Home</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link selected">
+              <a class="inside-nav-link" href="./search.html">Buscar</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./associates.html">Asociados</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./about.html">Nosotros</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./panel/login.html">
+                Iniciar sesión
+              </a>
+            </li>
+            <!-- .end nav-link -->
+          </ul>
+          <!-- end .nav-links -->
+        </div>
+        <!-- end .navigation -->
       </nav>
-      <!-- .navigation -->
+      <!-- end nav -->
     </header>
     <!-- end .header -->
+
     <main class="main">
       <section id="search">
-        <h1 class="section-title">¡Buscá tu pŕoximo amigo!</h1>
-        <div class="search-box flex">
-          <form action="search.html" class="search-form flex">
-            <div class="form-group">
-              <label for="gender">Género</label>
-              <input type="text" name="gender" id="gender" />
+        <div class="row">
+          <div class="col s12 section-title">
+            <h1 class="black-text bold">¡Buscá tu pŕoximo amigo!</h1>
+          </div>
+          <!-- end .section-title -->
+          <div class="col s10 offset-s1 search-box">
+            <div class="col s4 offset-s8 rounded form">
+              <form action="search.html">
+                <div class="input-field col m12">
+                  <i class="material-icons prefix">male</i>
+                  <select>
+                    <option value="" disabled selected>Género</option>
+                    <option value="male">Macho</option>
+                    <option value="female">Hembra</option>
+                  </select>
+                </div>
+                <!-- end .input-field -->
+                <div class="input-field col m12">
+                  <i class="material-icons prefix">pets</i>
+                  <select>
+                    <option value="" disabled selected>Raza</option>
+                    <option value="labrador">Labrador</option>
+                    <option value="bulldog">Bulldog</option>
+                    <option value="chihuahua">Chihuahua</option>
+                    <option value="galgo">Galgo</option>
+                  </select>
+                </div>
+                <!-- end .input-field -->
+                <div class="input-field col m12">
+                  <i class="material-icons prefix">calendar_today</i>
+                  <input id="age" type="text" class="validate" />
+                  <label for="age">Edad</label>
+                </div>
+                <!-- end .input-field -->
+                <div class="input-field col m12">
+                  <i class="material-icons prefix">place</i>
+                  <input id="location" type="text" class="validate" />
+                  <label for="location">Ubicación</label>
+                </div>
+                <!-- end .input-field -->
+              </form>
+              <!-- end form -->
             </div>
-            <!-- end .form-group -->
-            <div class="form-group">
-              <label for="breed">Raza</label>
-              <input type="text" name="breed" id="breed" />
+            <!-- end .form -->
+          </div>
+          <!-- end .search-box -->
+          <div class="col s12 search-results">
+            <div class="col s12 m6 l4 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./../images/individual.jpg" alt="Mascota" />
+                </div>
+                <!-- .card-image -->
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, rem repellat!
+                  </p>
+                </div>
+                <!-- end .card-content -->
+                <div class="card-action" onclick="redirect('./profile.html')">
+                  <span> Ver perfil </span>
+                </div>
+                <!-- .card-action -->
+              </div>
+              <!-- end .card -->
             </div>
-            <!-- end .form-group -->
-            <div class="form-group">
-              <label for="age">Edad</label>
-              <input type="text" name="age" id="age" />
+            <!-- end .col -->
+            <div class="col s12 m6 l4 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./../images/individual.jpg" alt="Mascota" />
+                </div>
+                <!-- .card-image -->
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, rem repellat!
+                  </p>
+                </div>
+                <!-- .card-content -->
+                <div class="card-action" onclick="redirect('./profile.html')">
+                  <span> Ver perfil </span>
+                </div>
+                <!-- end .card-action -->
+              </div>
+              <!-- end .card -->
             </div>
-            <!-- end .form-group -->
-            <div class="form-group">
-              <label for="location">Ubicación</label>
-              <input type="text" name="location" id="location" />
+            <!-- end .col -->
+            <div class="col s12 m6 l4 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./../images/individual.jpg" alt="Mascota" />
+                </div>
+                <!-- end .card-image -->
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, rem repellat!
+                  </p>
+                </div>
+                <!-- end .card-content -->
+                <div class="card-action" onclick="redirect('./profile.html')">
+                  <span> Ver perfil </span>
+                </div>
+                <!-- end .card-action -->
+              </div>
+              <!-- end .card -->
             </div>
-            <!-- end .form-group -->
-            <div class="form-actions">
-              <button class="button cancel" type="reset">Limpiar</button>
-              <button class="button accept" type="submit">Buscar</button>
+            <!-- end .col -->
+            <div class="col s12 m6 l4 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./../images/individual.jpg" alt="Mascota" />
+                </div>
+                <!-- end .card-image -->
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, rem repellat!
+                  </p>
+                </div>
+                <!-- end .card-content -->
+                <div class="card-action" onclick="redirect('./profile.html')">
+                  <span> Ver perfil </span>
+                </div>
+                <!-- end .card-action -->
+              </div>
+              <!-- end .card -->
             </div>
-            <!-- end .form-actions -->
-          </form>
-          <!-- end .search-form -->
+            <!-- end .col -->
+            <div class="col s12 m6 l4 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./../images/individual.jpg" alt="Mascota" />
+                </div>
+                <!-- end .card-image -->
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, rem repellat!
+                  </p>
+                </div>
+                <!-- end .card-content -->
+                <div class="card-action" onclick="redirect('./profile.html')">
+                  <span> Ver perfil </span>
+                </div>
+                <!-- end .card-action -->
+              </div>
+              <!-- end .card -->
+            </div>
+            <!-- end .col -->
+            <div class="col s12 m6 l4 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./../images/individual.jpg" alt="Mascota" />
+                </div>
+                <!-- end .card-image -->
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, rem repellat!
+                  </p>
+                </div>
+                <!-- end card-content -->
+                <div class="card-action" onclick="redirect('./profile.html')">
+                  <span> Ver perfil </span>
+                </div>
+                <!-- end .card-action -->
+              </div>
+              <!-- end .card -->
+            </div>
+            <!-- end .col -->
+            <div class="col s12 m6 l4 xl3">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./../images/individual.jpg" alt="Mascota" />
+                </div>
+                <!-- end .card-image -->
+                <div class="card-content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quam, rem repellat!
+                  </p>
+                </div>
+                <!-- end .card-content -->
+                <div class="card-action" onclick="redirect('./profile.html')">
+                  <span> Ver perfil </span>
+                </div>
+                <!-- end .card-action -->
+              </div>
+              <!-- end .card -->
+            </div>
+            <!-- end .col -->
+          </div>
+          <!-- end .search-results -->
         </div>
-        <!--end .search-box -->
-        <div class="search-results flex">
-          <div class="search-item">
-            <img src="./../images//individual.jpg" alt="Mascota" />
-            <p class="search-item-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
-              rem repellat!
-            </p>
-            <span class="view-profile" onclick="redirect('./profile.html')"
-              >Ver perfil</span
-            >
-          </div>
-          <!-- end .search-item -->
-          <div class="search-item">
-            <img src="./../images//individual.jpg" alt="Mascota" />
-            <p class="search-item-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
-              rem repellat!
-            </p>
-            <span class="view-profile" onclick="redirect('./profile.html')"
-              >Ver perfil</span
-            >
-          </div>
-          <!-- end .search-item -->
-          <div class="search-item">
-            <img src="./../images//individual.jpg" alt="Mascota" />
-            <p class="search-item-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
-              rem repellat!
-            </p>
-            <span class="view-profile" onclick="redirect('./profile.html')"
-              >Ver perfil</span
-            >
-          </div>
-          <!-- end .search-item -->
-          <div class="search-item">
-            <img src="./../images//individual.jpg" alt="Mascota" />
-            <p class="search-item-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
-              rem repellat!
-            </p>
-            <span class="view-profile" onclick="redirect('./profile.html')"
-              >Ver perfil</span
-            >
-          </div>
-          <!-- end .search-item -->
-        </div>
-        <!-- end .search-results -->
+        <!-- end .row-->
       </section>
-      <!-- end #search -->
+      <!-- end #search-->
     </main>
     <!-- end .main -->
-    <footer class="footer flex">
-      <img src="./../assets/icons/huella.png" alt="logo" class="image-logo" />
-      <div class="text">Organizacion sin fines de lucro</div>
-      <div class="social-media">
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/facebook.png" alt="Facebook"
-        /></a>
-        <!-- end .social-icon-->
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/instagram.png" alt="Instagram"
-        /></a>
-        <!-- end .social-icon -->
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/youtube.png" alt="Youtube"
-        /></a>
-        <!-- end .social-icon -->
+    <footer class="page-footer">
+      <div class="row no-margin valign-wrapper">
+        <div class="col s1 footer-logo">
+          <img src="./../assets/icons/huella.png" alt="logo" />
+        </div>
+        <!-- end .footer-logo -->
+        <div class="footer-text black-text col s9 center-align">
+          <span class="center">Organizacion sin fines de lucro</span>
+        </div>
+        <!-- end .footer-text -->
+        <div class="social-media col s2 center">
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/facebook.png" alt="Facebook" />
+          </a>
+          <!-- end .social-icon-->
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/instagram.png" alt="Instagram" />
+          </a>
+          <!-- end .social-icon -->
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/youtube.png" alt="Youtube" />
+          </a>
+          <!-- end .social-icon -->
+        </div>
+        <!-- end .social-media -->
       </div>
-      <!-- end .social-media -->
+      <!-- end .row -->
     </footer>
     <!--  end .footer -->
+    <script src="./../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./../assets/js/materialize.min.js"></script>
     <script>
       function redirect(path) {
         window.location.assign(path);
       }
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("select").formSelect();
+      });
     </script>
   </body>
 </html>

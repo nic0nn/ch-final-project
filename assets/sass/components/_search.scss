@@ -1,0 +1,27 @@
+#search {
+  .search-box {
+    background-image: url(./../../../images/search.jpg);
+    background-position: 50% 85%;
+    background-size: cover;
+
+    .form {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      background-color: white;
+    }
+  }
+
+  .search-results {
+    margin-top: 50px;
+
+    .card {
+      background-color: $orange;
+
+      .card-action {
+        background-color: $dark-salmon;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}

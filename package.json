@@ -1,0 +1,25 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "nodemon": "^2.0.7",
+    "sass": "^1.32.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build-css": "sass assets/sass/main.scss assets/css/styles2.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nic0nn/ch-final-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nic0nn/ch-final-project/issues"
+  },
+  "homepage": "https://github.com/nic0nn/ch-final-project#readme"
+}

@@ -8,95 +8,153 @@
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link rel="stylesheet" href="./../assets/css/styles.css" />
+    <link rel="stylesheet" href="./../assets/css/styles2.css" />
     <title>¡No compres, adopta!</title>
   </head>
   <body>
     <header class="header">
-      <nav class="navigation flex">
-        <a href="./../index.html">
-          <img src="./../assets/icons/huella.png" alt="Logo" class="image-logo" />
-        </a>
-        <ul class="nav-links">
-          <li class="nav-link"><a class="inside-nav-link" href="./../index.html">Home</a></li>
-          <li class="nav-link"><a class="inside-nav-link" href="search.html">Buscar</a></li>
-          <li class="nav-link"><a class="inside-nav-link" href="associates.html">Asociados</a></li>
-          <li class="nav-link selected"><a class="inside-nav-link" href="about.html">Nosotros</a></li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="panel/login.html">Iniciar sesión</a>
-          </li>
-        </ul> <!-- end .nav-links -->
-      </nav> <!-- end .navigation -->
-    </header> <!-- end .header -->
+      <nav>
+        <div class="navigation nav-wrapper z-depth-1">
+          <a href="./../index.html" class="logo">
+            <img
+              src="./../assets/icons/huella.png"
+              alt="Logo"
+              class="image-logo"
+            />
+          </a>
+          <!-- end .logo -->
+          <ul id="nav-mobile" class="nav-links right hide-on-med-and-down">
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./../index.html">Home</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./search.html">Buscar</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./associates.html">Asociados</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link selected">
+              <a class="inside-nav-link" href="./about.html">Nosotros</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./panel/login.html">
+                Iniciar sesión
+              </a>
+            </li>
+            <!-- .end nav-link -->
+          </ul>
+          <!-- end .nav-links -->
+        </div>
+        <!-- end .navigation -->
+      </nav>
+      <!-- end nav -->
+    </header>
+    <!-- end .header -->
     <main class="main">
-      <section id="about-us" class="flex">
-        <div class="info">
-          <h1>Sobre nosotros</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            voluptas at doloremque maxime consequuntur dolore itaque fugit
-            facilis, reiciendis eveniet labore suscipit nobis amet aliquam ex
-            illum voluptates minus sequi!
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod,
-            veritatis error officia enim voluptatum voluptatem nihil non optio
-            adipisci excepturi quae inventore consequuntur ullam pariatur veniam
-            laboriosam minus hic odio.
-          </p>
-        </div> <!-- end .info -->
-        <img
-          class="image"
-          src="./../images//aboutUs.jpg"
-          alt="Sobre nosotros"
-        />
-      </section> <!-- end #about-us -->
-      <section id="our-team">
-        <h2>Nuestro equipo</h2>
-        <div class="team-container flex">
-          <div class="team-item">
-            <img
-              class="team-image"
-              src="./../images//team.png"
-              alt="Persona 1"
-            /> <!-- end .team-image -->
-            <p class="team-description">Rescatista</p>
-          </div> <!-- end .team-item -->
-
-          <div class="team-item">
-            <img
-              class="team-image"
-              src="./../images//team.png"
-              alt="Persona 2"
-            /> <!-- end .team-image -->
-            <p class="team-description">Fotógrafo</p>
-          </div> <!-- end .team-item -->
-
-          <div class="team-item">
-            <img
-              class="team-image"
-              src="./../images//team.png"
-              alt="Persona 3"
-            /> <!-- end .team-image -->
-            <p class="team-description">Veterinaria</p>
+      <section id="about-us">
+        <div class="row container">
+          <div class="section-title">
+            <h1>Sobre nosotros</h1>
           </div>
-        </div> <!-- end .team-item -->
-      </section> <!-- #our-team -->
-    </main> <!-- end .main -->
-    <footer class="footer flex">
-      <img src="./../assets/icons/huella.png" alt="logo" class="image-logo" />
-      <div class="text">Organizacion sin fines de lucro</div>
-      <div class="social-media">
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/facebook.png" alt="Facebook"
-        /></a>  <!-- end .social-icon-->
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/instagram.png" alt="Instagram"
-        /></a> <!-- end .social-icon -->
-        <a class="social-icon" href="#"
-          ><img src="./../assets/icons/youtube.png" alt="Youtube"
-        /></a>  <!-- end .social-icon -->
-      </div>  <!-- end .social-media -->
-    </footer>  <!--  end .footer -->
+          <!-- end .section-title -->
+          <div class="info col s12">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur voluptas at doloremque maxime consequuntur dolore
+              itaque fugit facilis, reiciendis eveniet labore suscipit nobis
+              amet aliquam ex illum voluptates minus sequi!
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod,
+              veritatis error officia enim voluptatum voluptatem nihil non optio
+              adipisci excepturi quae inventore consequuntur ullam pariatur
+              veniam laboriosam minus hic odio.
+            </p>
+          </div>
+          <!-- end .info -->
+        </div>
+        <!-- end .container -->
+      </section>
+      <!-- end #about-us -->
+      <section id="our-team" class="container">
+        <div class="row">
+          <div class="subsection-title">
+            <h2>Nuestro equipo</h2>
+          </div>
+          <!-- end .subsection-title -->
+          <div class="team-container">
+            <div class="col s12 m10 l8 offset-m1 offset-l2">
+              <div class="team-item col s12 m3 offset-m1">
+                <img
+                  class="responsive-image"
+                  src="./../images//team.png"
+                  alt="Persona 1"
+                />
+                <p class="team-description">Rescatista</p>
+              </div>
+              <!-- end .team-item -->
+
+              <div class="team-item col s12 m3 offset-m1">
+                <img
+                  class="responsive-image"
+                  src="./../images//team.png"
+                  alt="Persona 2"
+                />
+                <p class="team-description">Fotógrafo</p>
+              </div>
+              <!-- end .team-item -->
+
+              <div class="team-item col s12 m3 offset-m1">
+                <img
+                  class="responsive-image"
+                  src="./../images//team.png"
+                  alt="Persona 3"
+                />
+                <p class="team-description">Veterinaria</p>
+              </div>
+               <!-- end .team-item -->
+            </div>
+            <!-- end .col -->
+          </div>
+          <!-- end .team-container -->
+        </div>
+        <!-- end row -->
+      </section>
+      <!-- #our-team -->
+    </main>
+    <!-- end .main -->
+    <footer class="page-footer">
+      <div class="row no-margin valign-wrapper">
+        <div class="col s1 footer-logo">
+          <img src="./../assets/icons/huella.png" alt="logo" />
+        </div>
+        <!-- end .footer-logo -->
+        <div class="footer-text black-text col s9 center-align">
+          <span class="center">Organizacion sin fines de lucro</span>
+        </div>
+        <!-- end .footer-text -->
+        <div class="social-media col s2 center">
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/facebook.png" alt="Facebook" />
+          </a>
+          <!-- end .social-icon-->
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/instagram.png" alt="Instagram" />
+          </a>
+          <!-- end .social-icon -->
+          <a class="social-icon" href="#">
+            <img src="./../assets/icons/youtube.png" alt="Youtube" />
+          </a>
+          <!-- end .social-icon -->
+        </div>
+        <!-- end .social-media -->
+      </div>
+      <!-- end .row -->
+    </footer>
+    <!--  end .footer -->
   </body>
 </html>
