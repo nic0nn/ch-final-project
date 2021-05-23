@@ -5,64 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="./../../assets/css/styles.css" />
     <title>Iniciar sesión</title>
   </head>
   <body>
     <header class="header">
-      <nav class="navigation flex">
-        <a href="./../../index.html">
-          <img src="./../../assets/icons/huella.png" alt="Logo" class="image-logo" />
-        </a>
-        <ul class="nav-links">
-          <li class="nav-link">
-            <a class="inside-nav-link" href="./../../index.html">Home</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="./../search.html">Buscar</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="./../associates.html">Asociados</a>
-          </li>
-          <li class="nav-link">
-            <a class="inside-nav-link" href="./../about.html">Nosotros</a>
-          </li>
-        </ul>
-        <!-- end .nav-links -->
+      <nav>
+        <div class="navigation nav-wrapper z-depth-1">
+          <a href="./../../index.html" class="logo">
+            <img
+              src="./../../assets/icons/huella.png"
+              alt="Logo"
+              class="image-logo"
+            />
+          </a>
+          <ul id="nav-mobile" class="nav-links right hide-on-med-and-down">
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./../../index.html">Home</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link selected">
+              <a class="inside-nav-link" href="./../search.html">Buscar</a>
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./../associates.html"
+                >Asociados</a
+              >
+            </li>
+            <!-- .end nav-link -->
+            <li class="nav-link">
+              <a class="inside-nav-link" href="./../about.html">Nosotros</a>
+            </li>
+            <!-- .end nav-link -->
+          </ul>
+          <!-- end .nav-links -->
+        </div>
+        <!-- end .navigation -->
       </nav>
-      <!-- .navigation -->
+      <!-- end nav -->
     </header>
     <!-- end .header -->
+    <!-- end .header -->
     <main class="main">
-      <section id="login" class="flex">
-        <div class="login-container">
-          <h1>Bienvenido/a!</h1>
-          <form
-            class="login-form flex"
-            action="#"
-            onsubmit="redirect(event, './pets.html') "
-          >
-            <label for="username">Usuario</label>
-            <input type="text" name="username" id="username" />
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" />
-            <div class="form-actions">
-              <button class="button cancel" onclick="redirect(event, '/index.html')">Cancelar</button>
-              <button class="button accept" type="submit">Iniciar sesión</button>
+      <section id="login" class="row valign-wrapper">
+        <div class="login-container col s12 container">
+          <div class="col s12 m6 offset-m3">
+            <div class="section-title">
+              <h1 class="bold">Bienvenido/a!</h1>
             </div>
-          </form>
+            <!-- .end section-title -->
+            <form
+              class="login-form"
+              action="#"
+              onsubmit="redirect(event, './pets.html') "
+            >
+              <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <label for="username">Usuario</label>
+                <input type="text" name="username" id="username" />
+              </div>
+              <!-- end .input-field -->
+              <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" />
+              </div>
+              <!-- end .input-field -->
+              <div class="form-actions">
+                <button
+                  class="button cancel"
+                  onclick="redirect(event, '/index.html')"
+                >
+                  Cancelar
+                </button>
+                <button class="button accept" type="submit">
+                  Iniciar sesión
+                </button>
+              </div>
+              <!-- end .forn-actions -->
+            </form>
+          </div>
+          <!-- end .col -->
         </div>
+        <!-- end .login-container -->
       </section>
+      <!-- end #login -->
     </main>
-    <!-- Este JS se añadió para simular un inicio de sesión exitoso -->
+    <!-- end .main -->
+
+    <!-- scripts -->
+    <script src="./../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./../../assets/js/materialize.min.js"></script>
+
     <script>
       function redirect(e, path) {
         e.preventDefault();
         window.location.assign(path);
       }
     </script>
+    <!-- end scripts -->
   </body>
 </html>

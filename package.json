@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build-css": "sass assets/sass/main.scss assets/css/styles2.css",
+    "build-css": "sass assets/sass/main.scss assets/css/styles.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {

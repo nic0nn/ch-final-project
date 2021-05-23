@@ -8,7 +8,8 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./../assets/css/styles2.css" />
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    <link rel="stylesheet" href="./../assets/css/styles.css" />
     <title>¡No compres, adopta!</title>
   </head>
   <body>
@@ -39,12 +40,6 @@
               <a class="inside-nav-link" href="./about.html">Nosotros</a>
             </li>
             <!-- .end nav-link -->
-            <li class="nav-link">
-              <a class="inside-nav-link" href="./contact.html"
-                >Contacto</a
-              >
-            </li>
-            <!-- end .nav-link -->
             <li class="nav-link">
               <a class="inside-nav-link" href="./panel/login.html">
                 Iniciar sesión
@@ -108,158 +103,161 @@
             <!-- end .form -->
           </div>
           <!-- end .search-box -->
-          <div class="col s12 search-results">
-            <div class="col s12 m6 l4 xl3">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./../images/individual.jpg" alt="Mascota" />
-                </div>
-                <!-- .card-image -->
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quam, rem repellat!
-                  </p>
-                </div>
-                <!-- end .card-content -->
-                <div class="card-action" onclick="redirect('./profile.html')">
-                  <span> Ver perfil </span>
-                </div>
-                <!-- .card-action -->
-              </div>
-              <!-- end .card -->
-            </div>
-            <!-- end .col -->
-            <div class="col s12 m6 l4 xl3">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./../images/individual.jpg" alt="Mascota" />
-                </div>
-                <!-- .card-image -->
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quam, rem repellat!
-                  </p>
-                </div>
-                <!-- .card-content -->
-                <div class="card-action" onclick="redirect('./profile.html')">
-                  <span> Ver perfil </span>
-                </div>
-                <!-- end .card-action -->
-              </div>
-              <!-- end .card -->
-            </div>
-            <!-- end .col -->
-            <div class="col s12 m6 l4 xl3">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./../images/individual.jpg" alt="Mascota" />
-                </div>
-                <!-- end .card-image -->
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quam, rem repellat!
-                  </p>
-                </div>
-                <!-- end .card-content -->
-                <div class="card-action" onclick="redirect('./profile.html')">
-                  <span> Ver perfil </span>
-                </div>
-                <!-- end .card-action -->
-              </div>
-              <!-- end .card -->
-            </div>
-            <!-- end .col -->
-            <div class="col s12 m6 l4 xl3">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./../images/individual.jpg" alt="Mascota" />
-                </div>
-                <!-- end .card-image -->
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quam, rem repellat!
-                  </p>
-                </div>
-                <!-- end .card-content -->
-                <div class="card-action" onclick="redirect('./profile.html')">
-                  <span> Ver perfil </span>
-                </div>
-                <!-- end .card-action -->
-              </div>
-              <!-- end .card -->
-            </div>
-            <!-- end .col -->
-            <div class="col s12 m6 l4 xl3">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./../images/individual.jpg" alt="Mascota" />
-                </div>
-                <!-- end .card-image -->
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quam, rem repellat!
-                  </p>
-                </div>
-                <!-- end .card-content -->
-                <div class="card-action" onclick="redirect('./profile.html')">
-                  <span> Ver perfil </span>
-                </div>
-                <!-- end .card-action -->
-              </div>
-              <!-- end .card -->
-            </div>
-            <!-- end .col -->
-            <div class="col s12 m6 l4 xl3">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./../images/individual.jpg" alt="Mascota" />
-                </div>
-                <!-- end .card-image -->
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quam, rem repellat!
-                  </p>
-                </div>
-                <!-- end card-content -->
-                <div class="card-action" onclick="redirect('./profile.html')">
-                  <span> Ver perfil </span>
-                </div>
-                <!-- end .card-action -->
-              </div>
-              <!-- end .card -->
-            </div>
-            <!-- end .col -->
-            <div class="col s12 m6 l4 xl3">
-              <div class="card">
-                <div class="card-image">
-                  <img src="./../images/individual.jpg" alt="Mascota" />
-                </div>
-                <!-- end .card-image -->
-                <div class="card-content">
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Quam, rem repellat!
-                  </p>
-                </div>
-                <!-- end .card-content -->
-                <div class="card-action" onclick="redirect('./profile.html')">
-                  <span> Ver perfil </span>
-                </div>
-                <!-- end .card-action -->
-              </div>
-              <!-- end .card -->
-            </div>
-            <!-- end .col -->
-          </div>
-          <!-- end .search-results -->
         </div>
         <!-- end .row-->
+        <div class="search-results">
+          <div class="card">
+            <div class="card-image">
+              <img src="./../images/friends/1.jpeg" alt="Mascota" />
+              <span class="card-title">Bhen</span>
+              <span
+                onclick="redirect('./profile.html')"
+                class="btn-floating halfway-fab dark-salmon btn-large"
+              >
+                <i class="material-icons">star</i>
+              </span>
+            </div>
+            <!-- .card-image -->
+            <div class="card-content">
+              <p>
+                Llego siendo un cachorro de 6 meses y desde ese momento busca
+                hogar, se lleva bien con perros y es súper amoroso!
+              </p>
+            </div>
+            <!-- end .card-content -->
+          </div>
+          <!-- end .card -->
+          <div class="card">
+            <div class="card-image">
+              <img src="./../images/friends/2.jpg" alt="Mascota" />
+              <span class="card-title">Marlene</span>
+              <span
+                onclick="redirect('./profile.html')"
+                class="btn-floating halfway-fab dark-salmon btn-large"
+              >
+                <i class="material-icons">star</i>
+              </span>
+            </div>
+            <!-- .card-image -->
+            <div class="card-content">
+              <p>
+                Es muy buena con la gente, no asi con otros perros! Ya tuvo la
+                posibilidad de irse en adopción pero lamentablemente la
+                devolvieron. Ella todavía sigue buscando su oportunidad.
+              </p>
+            </div>
+            <!-- end .card-content -->
+          </div>
+          <!-- end .card -->
+          <div class="card">
+            <div class="card-image">
+              <img src="./../images/friends/3.jpg" alt="Mascota" />
+              <span class="card-title">Gigi</span>
+              <span
+                onclick="redirect('./profile.html')"
+                class="btn-floating halfway-fab dark-salmon btn-large"
+              >
+                <i class="material-icons">star</i>
+              </span>
+            </div>
+            <!-- .card-image -->
+            <div class="card-content">
+              <p>
+                Es super super cariñoso y super adorable con las personas. Sabe
+                llegar directo al corazón con tanto mimo que te da. Es un perro
+                activo y necesita quemar energía.
+              </p>
+            </div>
+            <!-- end .card-content -->
+          </div>
+          <!-- end .card -->
+          <div class="card">
+            <div class="card-image">
+              <img src="./../images/friends/4.jpg" alt="Mascota" />
+              <span class="card-title">Zeus</span>
+              <span
+                onclick="redirect('./profile.html')"
+                class="btn-floating halfway-fab dark-salmon btn-large"
+              >
+                <i class="material-icons">star</i>
+              </span>
+            </div>
+            <!-- .card-image -->
+            <div class="card-content">
+              <p>
+                Lo abandonaron en la puerta del refugio junto a su mama y sus
+                hermanitos, por suerte todos se fueron en adopción menos el,
+                quedo solito esperando su oportunidad
+              </p>
+            </div>
+            <!-- end .card-content -->
+          </div>
+          <!-- end .card -->
+          <div class="card">
+            <div class="card-image">
+              <img src="./../images/friends/5.jpeg" alt="Mascota" />
+              <span class="card-title">Laica</span>
+
+              <span
+                onclick="redirect('./profile.html')"
+                class="btn-floating halfway-fab dark-salmon btn-large"
+              >
+                <i class="material-icons">star</i>
+              </span>
+            </div>
+            <!-- .card-image -->
+            <div class="card-content">
+              <p>Ella es muy dulce y buena, esta esperando su oportunidad</p>
+            </div>
+            <!-- end .card-content -->
+          </div>
+          <!-- end .card -->
+          <div class="card">
+            <div class="card-image">
+              <img src="./../images/friends/6.jpeg" alt="Mascota" />
+              <span class="card-title">Happy</span>
+              <span
+                onclick="redirect('./profile.html')"
+                class="btn-floating halfway-fab dark-salmon btn-large"
+              >
+                <i class="material-icons">star</i>
+              </span>
+            </div>
+            <!-- .card-image -->
+            <div class="card-content">
+              <p>
+                Happy necesita una persona comprometida, responsable, afectuosa
+                pero firme, con paciencia, dispuesta a seguir trabajando con él
+                y con muchas ganas de ayudar a este precioso y poco afortunado
+                peludo.
+              </p>
+            </div>
+            <!-- end .card-content -->
+          </div>
+          <!-- end .card -->
+          <div class="card">
+            <div class="card-image">
+              <img src="./../images/individual.jpg" alt="Mascota" />
+              <span class="card-title">Larry</span>
+              <span
+                onclick="redirect('./profile.html')"
+                class="btn-floating halfway-fab dark-salmon btn-large"
+              >
+                <i class="material-icons">star</i>
+              </span>
+            </div>
+            <!-- .card-image -->
+            <div class="card-content">
+              <p>
+                Le encanta jugar con pelotas, y si hay más de una, mejor! Tiene
+                6 meses y con el plan sanitario al día.
+              </p>
+            </div>
+            <!-- end .card-content -->
+          </div>
+          <!-- end .card -->
+        </div>
+        <!-- end .search-results -->
       </section>
       <!-- end #search-->
     </main>
@@ -271,7 +269,7 @@
         </div>
         <!-- end .footer-logo -->
         <div class="footer-text black-text col s9 center-align">
-          <span class="center">Organizacion sin fines de lucro</span>
+          <span class="center bold">Organizacion sin fines de lucro</span>
         </div>
         <!-- end .footer-text -->
         <div class="social-media col s2 center">
@@ -293,6 +291,8 @@
       <!-- end .row -->
     </footer>
     <!--  end .footer -->
+
+    <!-- scripts -->
     <script src="./../assets/js/jquery-3.6.0.min.js"></script>
     <script src="./../assets/js/materialize.min.js"></script>
     <script>
@@ -303,7 +303,26 @@
     <script>
       $(document).ready(function () {
         $("select").formSelect();
+
+        // masonry effect
+        var macyInstance = Macy({
+          container: ".search-results",
+          trueOrder: false,
+          waitForImages: true,
+          margin: {
+            x: 20,
+            y: 40
+          },
+          columns: 4,
+          breakAt: {
+            1200: 3,
+            940: 2,
+            520: 2,
+            400: 1,
+          },
+        });
       });
     </script>
+    <!-- end scripts -->
   </body>
 </html>

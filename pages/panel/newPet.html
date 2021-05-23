@@ -5,44 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="./../../assets/css/styles.css" />
     <title>Bienvenido/a!</title>
   </head>
   <body>
     <header class="header panel">
-      <nav class="navigation flex">
-        <a href="./../../index.html">
-          <img
-            src="./../../assets/icons/huella.png"
-            alt="Logo"
-            class="image-logo"
-          />
-        </a>
-        <div class="user-profile flex">
-          <span class="username">Administrador</span>
-          <img src="./../../assets/icons/user.png" alt="Usuario" />
+      <nav>
+        <div class="navigation nav-wrapper flex flex-space-between z-depth-1">
+          <a href="./../../index.html" class="logo">
+            <img
+              src="./../../assets/icons/huella.png"
+              alt="Logo"
+              class="image-logo"
+            />
+          </a>
+          <div class="user-profile flex flex-center">
+            <span class="username bold black-text">Administrador</span>
+            <i class="material-icons black-text">account_circle</i>
+          </div>
+          <!-- end .user-profile -->
         </div>
-        <!-- end .user-profile -->
+        <!-- end .navigation -->
       </nav>
-      <!-- end .navigation -->
+      <!-- end nav -->
     </header>
     <!-- end .header -->
-    <main class="main grid">
-      <div class="sidebar">
+    <main class="main panel row">
+      <div class="sidebar col s12 m2">
         <nav>
-          <ul>
-            <li class="selected"><a href="./pets.html">Mascotas</a></li>
-            <li><a href="./associates.html">Asociados</a></li>
+          <ul class="flex flex-column">
+            <li class="light-orange z-depth-2">
+              <a class="black-text" href="./pets.html">Mascotas</a>
+            </li>
+            <li>
+              <a class="black-text" href="./associates.html">Asociados</a>
+            </li>
           </ul>
         </nav>
+        <!-- end nav -->
       </div>
       <!-- end .sidebar -->
-      <div class="main-content">
-        <div class="content-header">
-          <h1 class="content-title">Nueva mascota</h1>
+      <div class="main-content col s12 m10">
+        <div class="content-header flex flex-space-between flex-align-center">
+          <div class="section-title">
+            <h1>Nueva mascota</h1>
+          </div>
+          <!-- end sectin-title -->
         </div>
         <!-- end .content-header -->
         <div class="new-form">
@@ -51,104 +62,141 @@
             method="POST"
             onsubmit="redirect(event, './pets.html')"
           >
-            <div class="form-group">
-              <h2>Información de la mascota</h2>
-              <div class="pet-group flex">
-                <div class="info">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Nombre"
-                  />
-                  <input
-                    type="text"
-                    name="breed"
-                    id="breed"
-                    placeholder="Raza"
-                  />
-                  <div>
+            <div class="form-group white-background row">
+              <div class="subsection-title col s12">
+                <h2>Información de la mascota</h2>
+              </div>
+              <!-- end .subsection-title -->
+              <div class="col s12 flex">
+                <div class="info col s6">
+                  <div class="input-field">
+                    <input type="text" name="name" id="name" />
+                    <label for="name">Nombre</label>
+                  </div>
+                  <!-- end .input-field -->
+                  <div class="input-field">
+                    <input type="text" name="brew" id="brew" />
+                    <label for="brew">Raza</label>
+                  </div>
+                  <!-- end .input-field -->
+                  <div class="input-field">
+                    <input type="text" name="age" id="age" />
                     <label for="age">Edad</label>
-                    <select name="age" id="age">
-                      <option value="5 meses">5 meses</option>
-                      <option value="10 meses">10 meses</option>
-                      <option value="1 año">1 año</option>
-                    </select>
                   </div>
-                  <div>
-                    <label for="age">Género</label>
-                    <select name="gender" id="gender">
-                      <option value="femenino">Femenino</option>
-                      <option value="masculino">Masculino</option>
-                    </select>
+                  <!-- end .input-field -->
+                  <div class="input-field">
+                    <input type="text" name="gender" id="gender" />
+                    <label for="gender">Género</label>
                   </div>
+                  <!-- end .input-field -->
                 </div>
                 <!-- end .info -->
-                <div class="description">
-                  <textarea
-                    placeholder="Descripción"
-                    name="description"
-                    id="description"
-                    cols="30"
-                    rows="10"
-                  ></textarea>
+                <div class="description col s5 offset-s1">
+                  <div class="input-field">
+                    <textarea
+                      id="textarea"
+                      class="materialize-textarea"
+                    ></textarea>
+                    <label for="textarea">Descripción</label>
+                  </div>
+                  <!-- end .input-field -->
                 </div>
-                <!-- end .description -->
+                <!-- end .description-->
               </div>
-              <!-- end .form-text -->
+              <!-- end .col -->
             </div>
             <!-- end .form-group -->
-            <div class="form-group">
-              <h2>Información del asociado</h2>
-              <div class="pet-group">
-                <input
-                  type="search"
-                  name="pet"
-                  id="pet"
-                  placeholder="Buscar asociado"
-                />
-                <div class="pet-info">
-                  <p><b>Nombre:</b> Asociación cuatro patas</p>
-                  <p><b>Teléfono:</b> +2613111111</p>
-                  <p><b>Email:</b> mail@example.org</p>
-                  <p><b>Dirección:</b> Calle sin nombre 3299</p>
-                </div>
+            <div class="form-group white-background row">
+              <div class="subsection-title col s12">
+                <h2>Información del asociado</h2>
               </div>
-              <!-- end .group -->
-              <!-- end .pet-info -->
+              <!-- end .subsection-title -->
+              <div class="input-field col s6">
+                <i class="material-icons prefix">search</i>
+                <input type="text" name="search" id="search" />
+                <label for="search">Buscar</label>
+              </div>
+              <!-- end input-field -->
+              <div class="associate-info col s12">
+                <p><span class="bold">Nombre:</span> Asociación cuatro patas</p>
+                <p><span class="bold">Teléfono:</span> +2613111111</p>
+                <p><span class="bold">Email:</span> mail@example.org</p>
+                <p>
+                  <span class="bold">Dirección:</span> Calle sin nombre 3299
+                </p>
+              </div>
+              <!-- end .associate-info -->
             </div>
             <!-- end .form-group -->
-            <div class="pet-group form-group flex">
-              <div class="form-images">
-                <h2>Fotos</h2>
-                <input
-                  type="file"
-                  name="form-file-image"
-                  id="form-file-image"
-                />
-                <div class="images-container flex">
-                  <div class="form-image">
-                    <img src="./../../images//aboutUs.jpg" alt="imagen uno" />
+            <div class="form-group white-background row">
+              <div class="images col s12 m6">
+                <div class="subsection-title col s12">
+                  <h2>Imágenes</h2>
+                </div>
+                <!-- end .subsection-title -->
+                <div>
+                  <div class="file-field input-field col s8">
+                    <div class="btn">
+                      <span>Archivo</span>
+                      <input type="file" />
+                    </div>
+                    <!-- end .btn -->
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text" />
+                    </div>
+                    <!-- end .file-path-wrapper -->
                   </div>
-                  <div class="form-image">
-                    <img src="./../../images//aboutUs.jpg" alt="imagen uno" />
+                  <div class="images-container col s12">
+                    <div class="col s4">
+                      <div class="image">
+                        <img
+                          class="responsive-image"
+                          src="./../../images//aboutUs.jpg"
+                          alt="imagen uno"
+                        />
+                      </div>
+                      <!-- end .image -->
+                    </div>
+                    <!-- end .col -->
+                    <div class="col s4">
+                      <div class="image">
+                        <img
+                          class="responsive-image"
+                          src="./../../images//aboutUs.jpg"
+                          alt="imagen uno"
+                        />
+                      </div>
+                      <!-- end .image -->
+                    </div>
+                    <!-- end .col -->
+                    <div class="col s4">
+                      <div class="image">
+                        <img
+                          class="responsive-image"
+                          src="./../../images//aboutUs.jpg"
+                          alt="imagen uno"
+                        />
+                      </div>
+                      <!-- end .image -->
+                    </div>
+                    <!-- end .col -->
                   </div>
-                  <div class="form-image">
-                    <img src="./../../images//aboutUs.jpg" alt="imagen uno" />
-                  </div>
+                  <!-- end .images-container -->
                 </div>
               </div>
-              <!-- end .form-images -->
-              <div class="form-video">
-                <h2>Video</h2>
-                <input
-                  type="text"
-                  name="video-url"
-                  id="video-url"
-                  placeholder="URL youtube"
-                />
+              <!-- end .images -->
+              <div class="videos col s12 m6">
+                <div class="subsection-title col s12">
+                  <h2>Video</h2>
+                </div>
+                <!-- end .subsection-title -->
+                <div class="input-field col s12">
+                  <input type="text" name="video" id="video" />
+                  <label for="video">URL YouTube </label>
+                </div>
+                <!-- end .input-field -->
               </div>
-              <!-- end  .form-video -->
+              <!-- end .videos -->
             </div>
             <!-- end .form-group -->
             <div class="form-actions">
@@ -159,17 +207,23 @@
             </div>
             <!-- end .form-actions -->
           </form>
+          <!-- end form -->
         </div>
         <!-- end .new-form -->
       </div>
       <!-- end .main-content -->
     </main>
     <!-- end .main -->
+
+    <!-- scripts -->
+    <script src="./../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./../../assets/js/materialize.min.js"></script>
     <script>
       function redirect(event, path) {
         event.preventDefault();
         window.location.assign(path);
       }
     </script>
+    <!-- end scripts -->
   </body>
 </html>

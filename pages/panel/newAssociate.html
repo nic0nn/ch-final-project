@@ -5,44 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="./../../assets/css/styles.css" />
     <title>Bienvenido/a!</title>
   </head>
   <body>
     <header class="header panel">
-      <nav class="navigation flex">
-        <a href="./../../index.html">
-          <img
-            src="./../../assets/icons/huella.png"
-            alt="Logo"
-            class="image-logo"
-          />
-        </a>
-        <div class="user-profile flex">
-          <span class="username">Administrador</span>
-          <img src="./../../assets/icons/user.png" alt="Usuario" />
+      <nav>
+        <div class="navigation nav-wrapper flex flex-space-between z-depth-1">
+          <a href="./../../index.html" class="logo">
+            <img
+              src="./../../assets/icons/huella.png"
+              alt="Logo"
+              class="image-logo"
+            />
+          </a>
+          <div class="user-profile flex flex-center">
+            <span class="username bold black-text">Administrador</span>
+            <i class="material-icons black-text">account_circle</i>
+          </div>
+          <!-- end .user-profile -->
         </div>
-        <!-- end .user-profile -->
+        <!-- end .navigation -->
       </nav>
-      <!-- end .navigation -->
+      <!-- end nav -->
     </header>
     <!-- end .header -->
-    <main class="main grid">
-      <div class="sidebar">
+    <main class="main panel row">
+      <div class="sidebar col s12 m2">
         <nav>
-          <ul>
-            <li><a href="./pets.html">Mascotas</a></li>
-            <li class="selected"><a href="./associates.html">Asociados</a></li>
+          <ul class="flex flex-column">
+            <li>
+              <a class="black-text" href="./pets.html">Mascotas</a>
+            </li>
+            <li class="light-orange z-depth-2">
+              <a class="black-text" href="./associates.html">Asociados</a>
+            </li>
           </ul>
+          <!-- end flex -->
         </nav>
+        <!-- end nav -->
       </div>
       <!-- end .sidebar -->
-      <div class="main-content">
-        <div class="content-header flex">
-          <h1 class="content-title">Nuevo asociado</h1>
+      <div class="main-content col s12 m10">
+        <div class="content-header flex flex-space-between flex-align-center">
+          <div class="section-title">
+            <h1>Nuevo asociado</h1>
+          </div>
+          <!-- end .section-title -->
         </div>
         <!-- end .content-header -->
         <div class="new-form">
@@ -51,78 +63,109 @@
             method="POST"
             onsubmit="redirect(event, './associates.html')"
           >
-            <div class="form-group">
-              <h2>Información del asociado</h2>
-              <div class="associate-group flex">
-                <div class="info">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Nombre"
-                  />
-                  <input
-                    type="text"
-                    name="representative"
-                    id="representative"
-                    placeholder="Representante"
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                    placeholder="Teléfono"
-                  />
-                  <input
-                    type="text"
-                    name="address"
-                    id="address"
-                    placeholder="Dirección"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                  />
+            <div class="form-group white-background row">
+              <div class="subsection-title col s12">
+                <h2>Información del asociado</h2>
+              </div>
+              <!-- end .subsection-title -->
+              <div class="col s12 flex">
+                <div class="info col s6">
+                  <div class="input-field">
+                    <input
+                      type="text"
+                      name="representative"
+                      id="representative"
+                    />
+                    <label for="representative">Representante</label>
+                  </div>
+                  <!-- end .input-field -->
+                  <div class="input-field">
+                    <input type="text" name="phone" id="phone" />
+                    <label for="phone">Teléfono</label>
+                  </div>
+                  <!-- end .input-field -->
+                  <div class="input-field">
+                    <input type="text" name="address" id="address" />
+                    <label for="address">Dirección</label>
+                  </div>
+                  <!-- end .input-field -->
+                  <div class="input-field">
+                    <input type="text" name="email" id="email" />
+                    <label for="email">Email</label>
+                  </div>
+                  <!-- end .input-field -->
                 </div>
                 <!-- end .info -->
-                <div class="description">
-                  <textarea
-                    placeholder="Descripcion"
-                    name="description"
-                    id="description"
-                    cols="30"
-                    rows="10"
-                  ></textarea>
+                <div class="description col s5 offset-s1">
+                  <div class="input-field">
+                    <textarea
+                      id="textarea"
+                      class="materialize-textarea"
+                    ></textarea>
+                    <label for="textarea">Descripción</label>
+                  </div>
+                  <!-- end .input-field -->
                 </div>
                 <!-- end .description-->
               </div>
-              <!-- end .associate-group -->
+              <!-- end .col -->
             </div>
             <!-- end .form-group -->
-            <div class="form-group">
-              <div class="associate-images">
-                <h2>Fotos</h2>
-                <input
-                  type="file"
-                  name="associate-file-image"
-                  id="associate-file-image"
-                />
-                <div class="images-container flex">
-                  <div class="associate-image">
-                    <img src="./../../images//aboutUs.jpg" alt="imagen uno" />
+            <div class="form-group white-background row">
+              <div class="subsection-title col s12">
+                <h2>Imágenes</h2>
+              </div>
+              <!-- end .subsection-title -->
+              <div>
+                <div class="file-field input-field col s8">
+                  <div class="btn">
+                    <span>Archivo</span>
+                    <input type="file" />
                   </div>
-                  <div class="associate-image">
-                    <img src="./../../images//aboutUs.jpg" alt="imagen uno" />
+                  <!-- end .btn -->
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" />
                   </div>
-                  <div class="associate-image">
-                    <img src="./../../images//aboutUs.jpg" alt="imagen uno" />
+                  <!-- end .file-path-wrapper -->
+                </div>
+                <!-- end .file-field -->
+                <div class="images-container col s12">
+                  <div class="col s4">
+                    <div class="image">
+                      <img
+                        class="responsive-image"
+                        src="./../../images//aboutUs.jpg"
+                        alt="imagen uno"
+                      />
+                    </div>
+                    <!-- end .image -->
                   </div>
+                  <!-- end .col -->
+                  <div class="col s4">
+                    <div class="image">
+                      <img
+                        class="responsive-image"
+                        src="./../../images//aboutUs.jpg"
+                        alt="imagen uno"
+                      />
+                    </div>
+                    <!-- end .image -->
+                  </div>
+                  <!-- end .col -->
+                  <div class="col s4">
+                    <div class="image">
+                      <img
+                        class="responsive-image"
+                        src="./../../images//aboutUs.jpg"
+                        alt="imagen uno"
+                      />
+                    </div>
+                    <!-- end .image -->
+                  </div>
+                  <!-- end .col -->
                 </div>
                 <!-- end .images-container -->
               </div>
-              <!-- end .associate-images -->
             </div>
             <!-- end .form-group -->
             <div class="form-actions">
@@ -135,17 +178,23 @@
             </div>
             <!-- end .form-actions -->
           </form>
+          <!-- end form -->
         </div>
         <!-- end .new-form -->
       </div>
       <!-- end .main-content -->
     </main>
     <!-- end .main -->
+
+    <!-- scripts -->
+    <script src="./../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./../../assets/js/materialize.min.js"></script>
     <script>
       function redirect(event, path) {
         event.preventDefault();
         window.location.assign(path);
       }
     </script>
+    <!-- end scripts -->
   </body>
 </html>

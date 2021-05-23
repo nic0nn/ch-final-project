@@ -13,6 +13,7 @@ body {
 main {
   flex: 1 auto;
   background-color: $light-salmon;
+  width: 100%;
 }
 
 section {
@@ -41,7 +42,6 @@ section {
 .section-title {
   h1 {
     font-size: 2rem;
-    margin-left: 2em;
     font-weight: bold;
   }
 }
@@ -49,11 +49,9 @@ section {
 .subsection-title {
   h2 {
     font-size: 1.5em;
-    margin-left: 2em;
     font-weight: bold;
   }
 }
-
 .responsive-image {
   width: 100%;
   height: auto;
@@ -73,4 +71,22 @@ section {
   &.flex-column {
     flex-direction: column;
   }
+  &.flex-space-between {
+    justify-content: space-between;
+  }
+  &.flex-align-center {
+    align-items: center;
+  }
+}
+
+.dark-salmon {
+  color: $dark-salmon
+}
+
+.light-orange {
+  background-color: $light-orange;
+}
+
+.white-background {
+  background-color: white;
 }

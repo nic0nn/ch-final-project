@@ -6,7 +6,7 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/styles2.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
     <title>¡No compres, adopta!</title>
   </head>
   <body>
@@ -30,12 +30,6 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
             </li>
             <!-- end .nav-link -->
             <li class="nav-link">
-              <a class="inside-nav-link" href="./pages/contact.html"
-                >Contacto</a
-              >
-            </li>
-            <!-- end .nav-link -->
-            <li class="nav-link">
               <a class="inside-nav-link" href="./pages/panel/login.html"
                 >Iniciar sesión</a
               >
@@ -52,7 +46,7 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
     <main class="main">
       <section id="hero">
         <div class="hero-description">
-          <h1>Neque porro quisquam est qui dolorem ipsum</h1>
+          <h1 class="bold">¿Estás pensando comprar una nueva mascota?</h1>
           <a class="hero-button" href="#questions">¡Vamos allá!</a>
         </div>
         <!-- end .hero-description -->
@@ -63,7 +57,7 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
           <div class="carousel-item valign-wrapper">
             <div class="questions-container flex">
               <h2 class="question-text">
-                1- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                1- ¿Necesitás a alguien que te haga compañía?
               </h2>
               <!-- end .question-text -->
               <div class="question-buttons">
@@ -71,21 +65,21 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
                   class="button cancel"
                   onclick="redirect('./pages/whyAdopt.html')"
                 >
-                  Cancelar
+                  No
                 </button>
                 <button class="button accept" onclick="slideCarousel()">
-                  Continuar
+                  Si
                 </button>
               </div>
               <!--end .question-buttons-->
             </div>
             <!-- end .questions-container -->
           </div>
-          <!-- emd .carousel-item -->
+          <!-- end .carousel-item -->
           <div class="carousel-item valign-wrapper">
             <div class="questions-container flex">
               <h2 class="question-text">
-                2- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                2- ¿Esperás que esté siempre ahí para brindarte todo su amor?.
               </h2>
               <!-- end .question-text -->
               <div class="question-buttons">
@@ -93,10 +87,10 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
                   class="button cancel"
                   onclick="redirect('./pages/whyAdopt.html')"
                 >
-                  Cancelar
+                  No
                 </button>
                 <button class="button accept" onclick="slideCarousel()">
-                  Continuar
+                  Si
                 </button>
               </div>
               <!--end .question-buttons-->
@@ -107,8 +101,12 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
           <div class="carousel-item valign-wrapper">
             <div class="questions-container flex">
               <h2 class="question-text">
-                3- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                3- Entonces.. ¿Porque pagar algo que puedes obtener gratis?
               </h2>
+              <p>
+                Un perrito callejero llenará tu hogar de amor y te brindará su
+                amistad incondicional.
+              </p>
               <!-- end .question-text -->
               <div class="question-buttons">
                 <button
@@ -121,7 +119,7 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
                   class="button accept"
                   onclick="redirect('./pages/search.html')"
                 >
-                  Continuar
+                  ¡Adoptá a un amigo!
                 </button>
               </div>
               <!--end .question-buttons-->
@@ -143,7 +141,7 @@ Se desarrolla para ser un lazo entre refugios y posibles personas que quieran ad
         </div>
         <!-- end .footer-logo -->
         <div class="footer-text black-text col s9 center-align">
-          <span class="center">Organizacion sin fines de lucro</span>
+          <span class="center bold">Organizacion sin fines de lucro</span>
         </div>
         <!-- end .footer-text -->
         <div class="social-media col s2 center">

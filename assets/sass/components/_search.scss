@@ -17,10 +17,9 @@
     .card {
       background-color: $orange;
 
-      .card-action {
-        background-color: $dark-salmon;
-        font-weight: bold;
-        cursor: pointer;
+      .card-title {
+        background: $dark-salmon; 
+        padding: 10px;
       }
     }
   }

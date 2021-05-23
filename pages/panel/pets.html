@@ -5,58 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="./../../assets/css/styles.css" />
     <title>Bienvenido/a!</title>
   </head>
   <body>
     <header class="header panel">
-      <nav class="navigation flex">
-        <a href="./../../index.html">
-          <img
-            src="./../../assets/icons/huella.png"
-            alt="Logo"
-            class="image-logo"
-          />
-        </a>
-        <div class="user-profile flex">
-          <span class="username">Administrador</span>
-          <img src="./../../assets/icons/user.png" alt="Usuario" />
+      <nav>
+        <div class="navigation nav-wrapper flex flex-space-between z-depth-1">
+          <a href="./../../index.html" class="logo">
+            <img
+              src="./../../assets/icons/huella.png"
+              alt="Logo"
+              class="image-logo"
+            />
+          </a>
+          <div class="user-profile flex flex-center">
+            <span class="username bold black-text">Administrador</span>
+            <i class="material-icons black-text">account_circle</i>
+          </div>
+          <!-- end .user-profile -->
         </div>
-        <!-- end .user-profle -->
+        <!-- end .navigation -->
       </nav>
-      <!-- end .navigation -->
+      <!-- end nav -->
     </header>
-    <!-- end .header -->
-    <main class="main grid">
-      <div class="sidebar">
+    <!-- end .header.panel -->
+    <main class="main panel row">
+      <div class="sidebar col s12 m2">
         <nav>
-          <ul>
-            <li class="selected"><a href="./pets.html">Mascotas</a></li>
-            <li><a href="./associates.html">Asociados</a></li>
+          <ul class="flex flex-column">
+            <li class="light-orange z-depth-2">
+              <a class="black-text" href="./pets.html">Mascotas</a>
+            </li>
+            <li>
+              <a class="black-text" href="./associates.html">Asociados</a>
+            </li>
           </ul>
         </nav>
       </div>
       <!-- end .sidebar -->
-      <div class="main-content">
-        <div class="content-header flex">
-          <h1>Mascotas</h1>
+      <div class="main-content col s12 m10">
+        <div class="content-header flex flex-space-between flex-align-center">
+          <div class="section-title">
+            <h1>Mascotas</h1>
+          </div>
           <button class="button accept" onclick="redirect('./newPet.html')">
             Nueva mascota
           </button>
         </div>
         <!-- end .content-header -->
         <div class="main-table">
-          <div class="filters">
-            <input
-              type="search"
-              name="search"
-              placeholder="Buscar"
-              id="search"
-            />
-            <select name="paginator" id="paginator">
+          <div class="filters row flex">
+            <div class="input-field">
+              <i class="material-icons prefix">search</i>
+              <input type="text" name="search" id="search" />
+              <label for="search">Buscar</label>
+            </div>
+            <select
+              name="paginator"
+              class="col s2 offset-s1 text-center browser-default"
+              id="paginator"
+            >
               <option value="5">5 filas</option>
               <option value="10">10 filas</option>
               <option value="15">15 filas</option>
@@ -64,97 +76,115 @@
             </select>
           </div>
           <!-- end .filters -->
-          <div class="pet-table grid">
-            <div class="row grid headers">
-              <div class="flex flex-center">Nombre</div>
-              <div class="flex flex-center">Edad</div>
-              <div class="flex flex-center">Raza</div>
-              <div class="flex flex-center">Género</div>
-              <div class="flex flex-center">Ubicación</div>
-              <div class="flex flex-center">Estado</div>
-              <div class="flex flex-center">Acciones</div>
-            </div>
+          <table class="centered responsive-table">
+            <thead>
+              <tr class="headers">
+                <th class="light-orange">Nombre</th>
+                <th class="light-orange">Edad</th>
+                <th class="light-orange">Raza</th>
+                <th class="light-orange">Género</th>
+                <th class="light-orange">Ubicación</th>
+                <th class="light-orange">Estado</th>
+                <th class="light-orange">Acciones</th>
+              </tr>
+            </thead>
             <!-- end .row.headers -->
-            <div class="row grid odd">
-              <div class="flex flex-center">Laica</div>
-              <div class="flex flex-center">5 meses</div>
-              <div class="flex flex-center">Mezcla</div>
-              <div class="flex flex-center">Femenino</div>
-              <div class="flex flex-center">Asociación 4 patas</div>
-              <div class="flex flex-center">
-                <input type="checkbox" name="pet-state-1" id="pet-state-1" />
-              </div>
-              <div class="flex flex-center">
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                    fill="#444"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- end .row -->
-            <div class="row grid">
-              <div class="flex flex-center">Laica</div>
-              <div class="flex flex-center">5 meses</div>
-              <div class="flex flex-center">Mezcla</div>
-              <div class="flex flex-center">Femenino</div>
-              <div class="flex flex-center">Asociación 4 patas</div>
-              <div class="flex flex-center">
-                <input type="checkbox" name="pet-state-1" id="pet-state-2" />
-              </div>
-              <div class="flex flex-center">
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                    fill="#444"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- end .row -->
-            <div class="row grid odd">
-              <div class="flex flex-center">Laica</div>
-              <div class="flex flex-center">5 meses</div>
-              <div class="flex flex-center">Mezcla</div>
-              <div class="flex flex-center">Femenino</div>
-              <div class="flex flex-center">Asociación 4 patas</div>
-              <div class="flex flex-center">
-                <input type="checkbox" name="pet-state-1" id="pet-state-3" />
-              </div>
-              <div class="flex flex-center">
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                    fill="#444"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- end .row -->
-          </div>
+            <tbody>
+              <tr class="odd">
+                <td>Laica</td>
+                <td>5 meses</td>
+                <td>Mezcla</td>
+                <td>Femenino</td>
+                <td>Asociación 4 patas</td>
+                <td>
+                  <i class="material-icons">check</i>
+                </td>
+                <td>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      fill="#444"
+                    />
+                  </svg>
+                </td>
+              </tr>
+              <!-- end .row -->
+              <tr class="grid">
+                <td>Laica</td>
+                <td>5 meses</td>
+                <td>Mezcla</td>
+                <td>Femenino</td>
+                <td>Asociación 4 patas</td>
+                <td></td>
+                <td>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      fill="#444"
+                    />
+                  </svg>
+                </td>
+              </tr>
+              <!-- end .row -->
+              <tr class="grid odd">
+                <td>Laica</td>
+                <td>5 meses</td>
+                <td>Mezcla</td>
+                <td>Femenino</td>
+                <td>Asociación 4 patas</td>
+                <td>
+                  <i class="material-icons">check</i>
+                </td>
+                <td>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      fill="#444"
+                    />
+                  </svg>
+                </td>
+              </tr>
+              <!-- end .row -->
+            </tbody>
+          </table>
           <!-- end .pet-table -->
+          <ul class="pagination">
+            <li class="disabled">
+              <a href="#!"><i class="material-icons">chevron_left</i></a>
+            </li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect">
+              <a href="#!"><i class="material-icons">chevron_right</i></a>
+            </li>
+          </ul>
         </div>
         <!-- end .main-table -->
       </div>
       <!-- end .main-content -->
     </main>
     <!-- end .main -->
+
+    <script src="./../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./../../assets/js/materialize.min.js"></script>
     <script>
       function redirect(path) {
         window.location.assign(path);

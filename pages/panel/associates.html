@@ -5,45 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="./../../assets/css/styles.css" />
     <title>Bienvenido/a!</title>
   </head>
   <body>
     <header class="header panel">
-      <nav class="navigation flex">
-        <a href="./../../index.html">
-          <img
-            src="./../../assets/icons/huella.png"
-            alt="Logo"
-            class="image-logo"
-          />
-        </a>
-        <!-- end .image-logo -->
-        <div class="user-profile flex">
-          <span class="username">Administrador</span>
-          <img src="./../../assets/icons/user.png" alt="Usuario" />
+      <nav>
+        <div class="navigation nav-wrapper flex flex-space-between z-depth-1">
+          <a href="./../../index.html" class="logo">
+            <img
+              src="./../../assets/icons/huella.png"
+              alt="Logo"
+              class="image-logo"
+            />
+          </a>
+          <div class="user-profile flex flex-center">
+            <span class="username bold black-text">Administrador</span>
+            <i class="material-icons black-text">account_circle</i>
+          </div>
+          <!-- end .user-profile -->
         </div>
-        <!-- end .user-profile -->
+        <!-- end .navigation -->
       </nav>
-      <!-- end .navigation -->
+      <!-- end nav -->
     </header>
     <!-- end .header -->
-    <main class="main grid">
-      <div class="sidebar">
+    <main class="main panel row">
+      <div class="sidebar col s12 m2">
         <nav>
-          <ul>
-            <li><a href="pets.html">Mascotas</a></li>
-            <li class="selected"><a href="./associates.html">Asociados</a></li>
+          <ul class="flex flex-column">
+            <li>
+              <a class="black-text" href="./pets.html">Mascotas</a>
+            </li>
+            <li class="light-orange z-depth-2">
+              <a class="black-text" href="./associates.html">Asociados</a>
+            </li>
           </ul>
         </nav>
+        <!-- end nav -->
       </div>
       <!-- end .sidebar -->
-      <div class="main-content">
-        <div class="content-header flex">
-          <h1>Asociados</h1>
+      <div class="main-content col s12 m10">
+        <div class="content-header flex flex-space-between flex-align-center">
+          <div class="section-title">
+            <h1>Asociados</h1>
+          </div>
+          <!-- end .section-title -->
           <button
             class="button accept"
             onclick="redirect('./newAssociate.html')"
@@ -53,106 +63,132 @@
         </div>
         <!-- end .content-header -->
         <div class="main-table">
-          <div class="filters">
-            <input
-              type="search"
-              name="search"
-              placeholder="Buscar"
-              id="search"
-            />
-            <select name="paginator" id="paginator">
+          <div class="filters row flex">
+            <div class="input-field">
+              <i class="material-icons prefix">search</i>
+              <input type="text" name="search" id="search" />
+              <label for="search">Buscar</label>
+            </div>
+            <!-- end .input-field -->
+            <select
+              name="paginator"
+              class="col s2 offset-s1 text-center browser-default"
+              id="paginator"
+            >
               <option value="5">5 filas</option>
               <option value="10">10 filas</option>
               <option value="15">15 filas</option>
               <option value="20">20 filas</option>
             </select>
+            <!-- end #paginator -->
           </div>
           <!-- end .filters -->
-          <div class="associate-table grid">
-            <div class="row grid headers">
-              <div class="flex flex-center">Nombre</div>
-              <div class="flex flex-center">Dirección</div>
-              <div class="flex flex-center">Teléfono</div>
-              <div class="flex flex-center">Email</div>
-              <div class="flex flex-center">Representante</div>
-              <div class="flex flex-center">Acciones</div>
-            </div>
-            <!-- end .row.headers -->
-            <div class="row grid odd">
-              <div class="flex flex-center">Asociación cuatro patas</div>
-              <div class="flex flex-center">Calle sin número 3299</div>
-              <div class="flex flex-center">+5492613111111</div>
-              <div class="flex flex-center">mail@example.org</div>
-              <div class="flex flex-center">nicolas bastias</div>
-              <div class="flex flex-center">
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                    fill="#444"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- end .row -->
-            <div class="row grid even">
-              <div class="flex flex-center">Asociación cuatro patas</div>
-              <div class="flex flex-center">Calle sin número 3299</div>
-              <div class="flex flex-center">+5492613111111</div>
-              <div class="flex flex-center">mail@example.org</div>
-              <div class="flex flex-center">nicolas bastias</div>
-              <div class="flex flex-center">
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                    fill="#444"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- end .row -->
-            <div class="row grid odd">
-              <div class="flex flex-center">Asociación cuatro patas</div>
-              <div class="flex flex-center">Calle sin número 3299</div>
-              <div class="flex flex-center">+5492613111111</div>
-              <div class="flex flex-center">mail@example.org</div>
-              <div class="flex flex-center">nicolas bastias</div>
-              <div class="flex flex-center">
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-                    fill="#444"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- end .row -->
-          </div>
-          <!-- end .associate-table -->
+          <table class="centered responsive-table">
+            <thead>
+              <th class="light-orange">Nombre</th>
+              <th class="light-orange">Dirección</th>
+              <th class="light-orange">Teléfono</th>
+              <th class="light-orange">Email</th>
+              <th class="light-orange">Representante</th>
+              <th class="light-orange">Acciones</th>
+            </thead>
+            <!-- end thead -->
+            <tbody>
+              <tr class="odd">
+                <td>Asociación cuatro patas</td>
+                <td>Calle sin número 3299</td>
+                <td>+5492613111111</td>
+                <td>mail@example.org</td>
+                <td>nicolas bastias</td>
+                <td>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      fill="#444"
+                    />
+                  </svg>
+                </td>
+              </tr>
+              <!-- end tr -->
+              <tr class="even">
+                <td>Asociación cuatro patas</td>
+                <td>Calle sin número 3299</td>
+                <td>+5492613111111</td>
+                <td>mail@example.org</td>
+                <td>nicolas bastias</td>
+                <td>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      fill="#444"
+                    />
+                  </svg>
+                </td>
+              </tr>
+              <!-- end tr -->
+              <tr class="odd">
+                <td>Asociación cuatro patas</td>
+                <td>Calle sin número 3299</td>
+                <td>+5492613111111</td>
+                <td>mail@example.org</td>
+                <td>nicolas bastias</td>
+                <td>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                      fill="#444"
+                    />
+                  </svg>
+                </td>
+              </tr>
+              <!-- end tr -->
+            </tbody>
+          </table>
+          <!-- end table -->
+          <ul class="pagination">
+            <li class="disabled">
+              <a href="#!"><i class="material-icons">chevron_left</i></a>
+            </li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect">
+              <a href="#!"><i class="material-icons">chevron_right</i></a>
+            </li>
+          </ul>
+          <!-- end .pagination -->
         </div>
         <!-- end .main-table -->
       </div>
       <!-- end .main-content -->
     </main>
     <!-- end .main -->
+    
+    <!-- scripts -->
+    <script src="./../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./../../assets/js/materialize.min.js"></script>
     <script>
       function redirect(path) {
         window.location.assign(path);
       }
     </script>
+    <!-- end scripts -->
   </body>
 </html>
