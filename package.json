@@ -1,7 +1,7 @@
 {
-  "name": "final_project",
+  "name": "adopt_a_friend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto final del curso Desarrollo Web de CoderHouse. Inspirado en un proyecto personal para la adopción de perros callejeros",
   "main": "index.js",
   "dependencies": {
     "nodemon": "^2.0.7",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/nic0nn/ch-final-project.git"
   },
-  "author": "",
+  "author": "Nicolas Bastias",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nic0nn/ch-final-project/issues"
