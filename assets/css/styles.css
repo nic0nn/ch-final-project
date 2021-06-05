@@ -41,7 +41,7 @@ section > .h* {
 }
 
 .section-title h1 {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -93,6 +93,10 @@ section > .h* {
   font-family: "Fabada";
   src: url("./../fonts/Fabada.ttf");
 }
+.f18 {
+  font-size: 18px;
+}
+
 .button {
   padding: 0.5em 1em;
   border-radius: 8px;
@@ -181,7 +185,7 @@ section > .h* {
 }
 
 #hero {
-  background-image: url("./../../images/hero.jpg");
+  background-image: url("/images/hero.jpg");
   background-size: cover;
   background-position: center;
   height: -webkit-calc(100vh - 64px);
@@ -238,8 +242,11 @@ section > .h* {
   margin-top: 20px;
 }
 
+#search {
+  padding: 0 2em;
+}
 #search .search-box {
-  background-image: url("./../../../images/search.jpg");
+  background-image: url("/images/search.jpg");
   background-position: 50% 85%;
   background-size: cover;
 }
